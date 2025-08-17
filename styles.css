@@ -1,0 +1,65 @@
+/* Custom Colors from Palette */
+:root {
+    --pink: #CC8899;
+    --light-pink: #6F8FAF;
+    --light-green: #E5DFCF;
+    --dark-gray: #434343;
+    --gold: #BE9A60;
+}
+
+/* Navbar Styling */
+#navbar {
+    transition: background-color 0.3s ease;
+}
+
+#navbar.scrolled {
+    background-color: rgba(67, 67, 67, 0.9);
+}
+
+/* Section Backgrounds */
+.bg-pink {
+    background-color: var(--pink);
+}
+
+.bg-light-pink {
+    background-color: var(--light-pink);
+}
+
+.bg-light-green {
+    background-color: var(--light-green);
+}
+
+.bg-dark-gray {
+    background-color: var(--dark-gray);
+}
+
+.text-pink {
+    color: var(--pink);
+}
+
+.text-dark-gray {
+    color: var(--dark-gray);
+}
+
+.text-gold {
+    color: var(--gold);
+}
+
+.bg-gold {
+    background-color: var(--gold);
+}
+
+/* Project Card Hover Effect */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
