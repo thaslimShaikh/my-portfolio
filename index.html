@@ -1,171 +1,125 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shaik Thaslim - Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body class="bg-gray-100 font-sans">
+<!-- Hero -->
+<section id="home" class="h-screen bg-pink flex items-center justify-center text-center">
+    <div>
+        <h1 class="text-5xl font-bold text-dark-gray mb-4">Hello, I'm Shaik Thaslim</h1>
+        <p class="text-xl text-gray-700 mb-6">
+            AI & Software Developer | Machine Learning | Backend Systems | Robotics
+        </p>
+        <a href="#projects" class="bg-gold text-white py-2 px-6 rounded-full hover:bg-dark-gray transition duration-300">View My Work</a>
+    </div>
+</section>
 
-    <!-- Navbar -->
-    <nav id="navbar" class="bg-dark-gray text-white py-4 fixed w-full top-0 z-50 shadow-lg">
-        <div class="container mx-auto flex justify-between items-center px-6">
-            <h1 class="text-2xl font-bold">Shaik Thaslim</h1>
-            <ul class="flex space-x-6">
-                <li><a href="#home" class="hover:text-pink transition duration-300">Home</a></li>
-                <li><a href="#about" class="hover:text-pink transition duration-300">About</a></li>
-                <li><a href="#education" class="hover:text-pink transition duration-300">Education</a></li>
-                <li><a href="#projects" class="hover:text-pink transition duration-300">Projects</a></li>
-                <li><a href="#skills" class="hover:text-pink transition duration-300">Skills</a></li>
-                <li><a href="#contact" class="hover:text-pink transition duration-300">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+<!-- About -->
+<section id="about" class="py-16 bg-light-pink">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">About Me</h2>
+        <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+            I am a B.Tech student in Artificial Intelligence and Engineering with experience across machine learning, backend systems, and robotics. 
+            I have worked on scalable pipelines, REST APIs, and real-time simulation systems, and I am passionate about building intelligent and efficient solutions.
+        </p>
+    </div>
+</section>
 
-    <!-- Hero -->
-    <section id="home" class="h-screen bg-pink flex items-center justify-center text-center">
-        <div>
-            <h1 class="text-5xl font-bold text-dark-gray mb-4">Hello, I'm Shaik Thaslim</h1>
-            <p class="text-xl text-gray-700 mb-6">
-                Full Stack Developer (Backend-Focused) | REST APIs | Scalable Systems
-            </p>
-            <a href="#projects" class="bg-gold text-white py-2 px-6 rounded-full hover:bg-dark-gray transition duration-300">View My Work</a>
-        </div>
-    </section>
+<!-- Projects -->
+<section id="projects" class="py-16 bg-light-pink">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-    <!-- About -->
-    <section id="about" class="py-16 bg-light-pink">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">About Me</h2>
-            <p class="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-                I am a B.Tech student in Artificial Intelligence and Engineering with strong interest in backend development and scalable systems. 
-                I have hands-on experience in building RESTful APIs, modular backend architectures, and integrating real-time pipelines across AI and full-stack applications.
-            </p>
-        </div>
-    </section>
-
-    <!-- Education -->
-    <section id="education" class="py-16 bg-light-green">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">Education</h2>
-            <div class="space-y-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-dark-gray">B.Tech in Artificial Intelligence and Engineering</h3>
-                    <p class="text-gray-600">Amrita Vishwa Vidyapeetham | 2023 - 2027</p>
-                    <p class="text-gray-600">CGPA: 9.01</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-dark-gray">Intermediate</h3>
-                    <p class="text-gray-600">RGUKT RK Valley | 2021 - 2023</p>
-                    <p class="text-gray-600">CGPA: 9.31</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-2xl font-semibold text-dark-gray">Class X</h3>
-                    <p class="text-gray-600">Keshava Reddy School | 2021</p>
-                    <p class="text-gray-600">100%</p>
-                </div>
+            <!-- Goal Planning -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">AI-driven Goal Planning System</h3>
+                <p class="text-gray-600">
+                    Developed a full-stack application with REST APIs for goal tracking and task generation using modular backend design.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, Flask, SQL, JavaScript, HTML, CSS</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects -->
-    <section id="projects" class="py-16 bg-light-pink">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-
-                <div class="bg-white p-6 rounded-lg shadow-lg project-card">
-                    <h3 class="text-2xl font-semibold text-dark-gray">AI-driven Goal Planning System</h3>
-                    <p class="text-gray-600">
-                        Designed scalable REST APIs with authentication and goal tracking using modular backend architecture ensuring low latency.
-                    </p>
-                    <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, Flask, SQL, JavaScript, HTML, CSS, Serper API</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg project-card">
-                    <h3 class="text-2xl font-semibold text-dark-gray">Hinglish Toxic Comment Detection & Rewriter</h3>
-                    <p class="text-gray-600">
-                        Built API-ready pipeline using XLM-RoBERTa and Mistral-7B achieving 81.24% toxicity reduction with 100% success rate on 29K+ samples.
-                    </p>
-                    <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, NLP</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg project-card">
-                    <h3 class="text-2xl font-semibold text-dark-gray">Post-COVID Lung Fibrosis Detection</h3>
-                    <p class="text-gray-600">
-                        Built ResNet50 and DenseNet121 models achieving 74% accuracy with optimized data pipelines.
-                    </p>
-                    <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, TensorFlow, OpenCV</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg project-card">
-                    <h3 class="text-2xl font-semibold text-dark-gray">Autonomous Underwater Robot</h3>
-                    <p class="text-gray-600">
-                        Simulated robot in Blender, ROS 2 and Gazebo with navigation and OpenCV-based image pipeline for ML classification.
-                    </p>
-                    <p class="text-gray-600 mt-2"><strong>Tech:</strong> ROS 2, Gazebo, Blender, Python, OpenCV</p>
-                </div>
-
+            <!-- Toxicity -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">Hinglish Toxic Comment Detection & Rewriter</h3>
+                <p class="text-gray-600">
+                    Built an NLP pipeline using transformer models for toxicity detection and rewriting on 29K+ samples.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, NLP, Transformers</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Skills -->
-    <section id="skills" class="py-16 bg-light-green">
-        <div class="container mx-auto px-6">
-            <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">Technical Skills</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Languages</h3>
-                    <p class="text-gray-600">Python, Java, C</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Backend</h3>
-                    <p class="text-gray-600">REST APIs, Flask, API Design, Modular Architecture</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Frontend</h3>
-                    <p class="text-gray-600">JavaScript, HTML, CSS, Bootstrap</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Database</h3>
-                    <p class="text-gray-600">MySQL, SQLite, MongoDB</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Tools</h3>
-                    <p class="text-gray-600">Git, GitHub, VS Code</p>
-                </div>
-
-                <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 class="text-xl font-semibold text-dark-gray">Core CS</h3>
-                    <p class="text-gray-600">DSA, OOP, DBMS, OS, Computer Networks</p>
-                </div>
-
+            <!-- Resume Screening -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">ML-based Resume Screening</h3>
+                <p class="text-gray-600">
+                    Developed an ensemble learning model for resume classification using SMOTE and PCA for improved performance.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, Scikit-learn, Pandas, NumPy</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact -->
-    <section id="contact" class="py-16 bg-dark-gray text-white">
-        <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-8">Get in Touch</h2>
-            <p class="text-lg mb-4">Email: 786shaikthaslim@gmail.com</p>
-            <p class="text-lg mb-4">Phone: +91-9398919257</p>
-            <div class="flex justify-center space-x-6">
-                <a href="https://github.com/thaslimShaikh" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-                <a href="https://www.linkedin.com/in/shaik-thaslim-33081030a" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+            <!-- Lung Fibrosis -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">Post-COVID Lung Fibrosis Detection</h3>
+                <p class="text-gray-600">
+                    Built deep learning models using transfer learning for medical image classification.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> Python, TensorFlow, OpenCV</p>
             </div>
-        </div>
-    </section>
 
-    <script src="script.js"></script>
-</body>
-</html>
+            <!-- Robot -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">Autonomous Underwater Robot</h3>
+                <p class="text-gray-600">
+                    Simulated underwater robot using ROS 2 and Gazebo with navigation and computer vision pipeline.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> ROS 2, Gazebo, Blender, Python, OpenCV</p>
+            </div>
+
+            <!-- Recipe Finder -->
+            <div class="bg-white p-6 rounded-lg shadow-lg project-card">
+                <h3 class="text-2xl font-semibold text-dark-gray">Recipe Finder</h3>
+                <p class="text-gray-600">
+                    Developed a frontend application to search and explore recipes based on ingredients.
+                </p>
+                <p class="text-gray-600 mt-2"><strong>Tech:</strong> HTML, CSS, JavaScript</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="py-16 bg-light-green">
+    <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-dark-gray text-center mb-8">Technical Skills</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Languages</h3>
+                <p class="text-gray-600">Python, Java, C</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Development</h3>
+                <p class="text-gray-600">REST APIs, Flask, JavaScript, HTML, CSS</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Machine Learning</h3>
+                <p class="text-gray-600">Scikit-learn, TensorFlow, NLP, Computer Vision</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Tools</h3>
+                <p class="text-gray-600">Git, GitHub, ROS 2, Gazebo, Blender</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Database</h3>
+                <p class="text-gray-600">MySQL, SQLite, MongoDB</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-xl font-semibold text-dark-gray">Core CS</h3>
+                <p class="text-gray-600">DSA, OOP, DBMS, OS, Computer Networks</p>
+            </div>
+
+        </div>
+    </div>
+</section>
