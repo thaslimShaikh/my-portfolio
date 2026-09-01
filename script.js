@@ -1,15 +1,10 @@
-/* =========================
-   SPIDER-GWEN PORTFOLIO FX
-   ========================= */
-
+// ── Spider Cursor (Spider-Gwen inspired) ──
 const spider = document.getElementById('spiderCursor');
-const webBanner = document.querySelector('.web-banner');
-
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-let spiderX = mouseX;
-let spiderY = mouseY;
+const web = document.getElementById('spiderWeb');
+let mouseX = 0, mouseY = 0;
+let spiderX = 0, spiderY = 0;
 let lastScrollY = window.scrollY;
+let isCrawling = false;
 let crawlTimeout = null;
 
 document.addEventListener('mousemove', (e) => {
@@ -20,384 +15,178 @@ document.addEventListener('mousemove', (e) => {
 function animateSpider() {
     spiderX += (mouseX - spiderX) * 0.18;
     spiderY += (mouseY - spiderY) * 0.18;
+    spider.style.left = spiderX + 'px';
+    spider.style.top = spiderY + 'px';
 
-    if (spider) {
-        spider.style.left = `${spiderX}px`;
-        spider.style.top = `${spiderY}px`;
+    if (web) {
+        web.style.left = spiderX + 'px';
+        web.style.top = spiderY + 'px';
+        web.style.opacity = isCrawling ? '0.5' : '0';
     }
 
     requestAnimationFrame(animateSpider);
 }
-
 animateSpider();
 
-
-/* =========================
-   WEB SCROLL EFFECT
-   ========================= */
-
+// Crawl animation on scroll
 window.addEventListener('scroll', () => {
-
     const dy = Math.abs(window.scrollY - lastScrollY);
     lastScrollY = window.scrollY;
 
-    /* Make cursor spider crawl while scrolling */
-    if (dy > 2 && spider) {
-
+    if (dy > 2) {
         spider.classList.add('crawl');
-
+        isCrawling = true;
         clearTimeout(crawlTimeout);
-
         crawlTimeout = setTimeout(() => {
             spider.classList.remove('crawl');
-        }, 260);
+            isCrawling = false;
+        }, 280);
     }
-
-    /* Change web appearance after leaving hero */
-    if (webBanner) {
-
-        webBanner.classList.toggle(
-            'scrolled',
-            window.scrollY > window.innerHeight * 0.78
-        );
-    }
-
-    /* Navbar glass effect */
-    const navbar = document.getElementById('navbar');
-
-    if (navbar) {
-        navbar.classList.toggle(
-            'scrolled',
-            window.scrollY > 50
-        );
-    }
-
 });
 
-
-/* =========================
-   SPIDER CURSOR INTERACTION
-   ========================= */
-
-document
-    .querySelectorAll(
-        'a, button, .project-card, .skill-card, .edu-card'
-    )
-    .forEach(el => {
-
-        el.addEventListener('mouseenter', () => {
-
-            if (!spider) return;
-
-            spider.style.color = 'var(--blue)';
-
-            spider.style.filter =
-                'drop-shadow(0 0 8px rgba(158,217,230,.55))';
-
-            spider.style.transform =
-                'translate(-50%, -50%) scale(1.35)';
-        });
-
-
-        el.addEventListener('mouseleave', () => {
-
-            if (!spider) return;
-
-            spider.style.color = 'var(--pink)';
-
-            spider.style.filter =
-                'drop-shadow(0 0 6px rgba(231,160,178,.45))';
-
-            spider.style.transform =
-                'translate(-50%, -50%) scale(1)';
-        });
-
+// Expand / color shift on interactive elements
+document.querySelectorAll('a, button, .project-card, .skill-card, .edu-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+        spider.style.color = 'var(--gold)';
+        spider.style.filter = 'drop-shadow(0 0 8px rgba(190, 154, 96, 0.6))';
+        spider.style.transform = 'translate(-50%, -50%) scale(1.35)';
     });
-
-
-/* =========================
-   SMOOTH NAVIGATION
-   ========================= */
-
-document
-    .querySelectorAll('a[href^="#"]')
-    .forEach(anchor => {
-
-        anchor.addEventListener('click', function (e) {
-
-            const target =
-                document.querySelector(this.getAttribute('href'));
-
-            if (!target) return;
-
-            e.preventDefault();
-
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-
-        });
-
+    el.addEventListener('mouseleave', () => {
+        spider.style.color = 'var(--pink)';
+        spider.style.filter = 'drop-shadow(0 0 4px rgba(204, 136, 153, 0.45))';
+        spider.style.transform = 'translate(-50%, -50%) scale(1)';
     });
+});
 
+// ── Sticky Navbar ──
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
 
-/* =========================
-   SCROLL REVEAL
-   ========================= */
-
-const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-};
-
-const revealObserver =
-    new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (entry.isIntersecting) {
-
-                entry.target.classList.add('visible');
-
-            }
-
-        });
-
-    }, observerOptions);
-
-
-/* Observe all animated elements */
-
-document
-    .querySelectorAll(
-        '.reveal, .section-heading, .edu-card, .project-card, .skill-card'
-    )
-    .forEach(el => {
-
-        revealObserver.observe(el);
-
+// ── Smooth Scrolling ──
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
     });
+});
 
-
-/* =========================
-   PROJECT CARD DELAYS
-   ========================= */
-
-document
-    .querySelectorAll('.project-card')
-    .forEach((card, i) => {
-
-        card.style.transitionDelay =
-            `${i * 0.08}s`;
-
+// ── Intersection Observer for scroll reveals ──
+const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
+}, observerOptions);
 
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.section-heading').forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.edu-card').forEach(el => revealObserver.observe(el));
 
-/* =========================
-   SKILL CARD DELAYS
-   ========================= */
+const projectCards = document.querySelectorAll('.project-card');
+projectCards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.1}s`;
+    revealObserver.observe(card);
+});
 
-document
-    .querySelectorAll('.skill-card')
-    .forEach((card, i) => {
+const skillCards = document.querySelectorAll('.skill-card');
+skillCards.forEach((card, i) => {
+    card.style.transitionDelay = `${i * 0.08}s`;
+    revealObserver.observe(card);
+});
 
-        card.style.transitionDelay =
-            `${i * 0.07}s`;
+document.querySelectorAll('.stagger-parent').forEach(el => revealObserver.observe(el));
 
-    });
-
-
-/* =========================
-   HERO TYPING EFFECT
-   ========================= */
-
-const heroSubtitle =
-    document.querySelector('.hero-subtitle');
-
+// ── Typing effect for hero subtitle ──
+const heroSubtitle = document.querySelector('.hero-subtitle');
 if (heroSubtitle) {
-
-    const text =
-        heroSubtitle.getAttribute('data-text') || '';
-
+    const text = heroSubtitle.getAttribute('data-text');
     heroSubtitle.textContent = '';
-
     let i = 0;
-
     setTimeout(() => {
-
         const interval = setInterval(() => {
-
             heroSubtitle.textContent += text[i];
-
             i++;
-
-            if (i >= text.length) {
-
-                clearInterval(interval);
-
-            }
-
-        }, 32);
-
+            if (i >= text.length) clearInterval(interval);
+        }, 35);
     }, 900);
-
 }
 
-
-/* =========================
-   ACTIVE NAVIGATION
-   ========================= */
-
-const sections =
-    document.querySelectorAll('section[id]');
-
-const navLinks =
-    document.querySelectorAll('#navbar ul a');
-
-
-const navObserver =
-    new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            const id =
-                entry.target.getAttribute('id');
-
-            navLinks.forEach(link => {
-
-                link.classList.toggle(
-                    'active-nav',
-                    link.getAttribute('href') === `#${id}`
-                );
-
-            });
-
-        });
-
-    }, {
-        threshold: 0.35
-    });
-
-
-sections.forEach(section => {
-
-    navObserver.observe(section);
-
+// ── Parallax on hero ──
+document.addEventListener('mousemove', (e) => {
+    const hero = document.getElementById('home');
+    if (!hero) return;
+    const rect = hero.getBoundingClientRect();
+    if (e.clientY > rect.bottom) return;
+    const x = (e.clientX / window.innerWidth - 0.5) * 20;
+    const y = (e.clientY / window.innerHeight - 0.5) * 20;
+    hero.style.setProperty('--parallax-x', `${x}px`);
+    hero.style.setProperty('--parallax-y', `${y}px`);
 });
 
-
-/* =========================
-   EDUCATION COUNTERS
-   ========================= */
-
-function animateCount(el) {
-
-    const target =
-        parseFloat(el.getAttribute('data-count'));
-
-    const duration = 1200;
-
-    const start =
-        performance.now();
-
-
-    function update(now) {
-
-        const progress =
-            Math.min(
-                (now - start) / duration,
-                1
-            );
-
-        const eased =
-            1 - Math.pow(1 - progress, 3);
-
-
-        el.textContent =
-            (target * eased).toFixed(2);
-
-
-        if (progress < 1) {
-
-            requestAnimationFrame(update);
-
-        } else {
-
-            el.textContent =
-                target.toFixed(2);
-
+// ── Active nav link highlighting ──
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('#navbar ul a');
+const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href') === `#${id}`) {
+                    link.classList.add('active-nav');
+                }
+            });
         }
+    });
+}, { threshold: 0.4 });
+sections.forEach(s => navObserver.observe(s));
 
+const style = document.createElement('style');
+style.textContent = `
+    #navbar ul a.active-nav {
+        color: var(--pink) !important;
     }
+    #navbar ul a.active-nav::after {
+        width: 100% !important;
+    }
+`;
+document.head.appendChild(style);
 
+// ── Counter animation for CGPA/grades ──
+function animateCount(el) {
+    const target = parseFloat(el.getAttribute('data-count'));
+    const suffix = el.getAttribute('data-suffix') || '';
+    const duration = 1200;
+    const start = performance.now();
+    function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = (target * eased).toFixed(2) + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+        else el.textContent = target.toFixed(2) + suffix;
+    }
     requestAnimationFrame(update);
 }
 
-
-const counterObserver =
-    new IntersectionObserver((entries) => {
-
-        entries.forEach(entry => {
-
-            if (!entry.isIntersecting) return;
-
-            entry.target
-                .querySelectorAll('[data-count]')
-                .forEach(animateCount);
-
-            counterObserver.unobserve(
-                entry.target
-            );
-
-        });
-
-    }, {
-        threshold: 0.5
+const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.querySelectorAll('[data-count]').forEach(animateCount);
+            counterObserver.unobserve(entry.target);
+        }
     });
+}, { threshold: 0.5 });
+document.querySelectorAll('.edu-card').forEach(card => counterObserver.observe(card));
 
-
-document
-    .querySelectorAll('.edu-card')
-    .forEach(card => {
-
-        counterObserver.observe(card);
-
-    });
-
-
-/* =========================
-   PAGE FADE-IN
-   ========================= */
-
+// ── Page load fade-in ──
 document.body.style.opacity = '0';
-
 window.addEventListener('load', () => {
-
-    document.body.style.transition =
-        'opacity .6s ease';
-
+    document.body.style.transition = 'opacity 0.6s ease';
     document.body.style.opacity = '1';
-
-});
-
-
-/* =========================
-   RESPONSIVE CURSOR
-   ========================= */
-
-window.addEventListener('resize', () => {
-
-    if (window.innerWidth <= 768 && spider) {
-
-        spider.style.display = 'none';
-
-    } else if (spider) {
-
-        spider.style.display = 'block';
-
-    }
-
 });
