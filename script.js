@@ -1,41 +1,61 @@
-// ── Custom Cursor ──
-const cursor = document.querySelector('.cursor');
-const follower = document.querySelector('.cursor-follower');
-
+// ── Spider Cursor (Spider-Gwen inspired) ──
+const spider = document.getElementById('spiderCursor');
+const web = document.getElementById('spiderWeb');
 let mouseX = 0, mouseY = 0;
-let followerX = 0, followerY = 0;
+let spiderX = 0, spiderY = 0;
+let lastScrollY = window.scrollY;
+let isCrawling = false;
+let crawlTimeout = null;
 
 document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    cursor.style.left = mouseX + 'px';
-    cursor.style.top = mouseY + 'px';
 });
 
-function animateFollower() {
-    followerX += (mouseX - followerX) * 0.12;
-    followerY += (mouseY - followerY) * 0.12;
-    follower.style.left = followerX + 'px';
-    follower.style.top = followerY + 'px';
-    requestAnimationFrame(animateFollower);
-}
-animateFollower();
+function animateSpider() {
+    spiderX += (mouseX - spiderX) * 0.18;
+    spiderY += (mouseY - spiderY) * 0.18;
+    spider.style.left = spiderX + 'px';
+    spider.style.top = spiderY + 'px';
 
-// Cursor expand on interactive elements
+    // subtle trail
+    if (web) {
+        web.style.left = spiderX + 'px';
+        web.style.top = spiderY + 'px';
+        web.style.opacity = isCrawling ? '0.5' : '0';
+    }
+
+    requestAnimationFrame(animateSpider);
+}
+animateSpider();
+
+// Crawl animation on scroll
+window.addEventListener('scroll', () => {
+    const dy = Math.abs(window.scrollY - lastScrollY);
+    lastScrollY = window.scrollY;
+
+    if (dy > 2) {
+        spider.classList.add('crawl');
+        isCrawling = true;
+        clearTimeout(crawlTimeout);
+        crawlTimeout = setTimeout(() => {
+            spider.classList.remove('crawl');
+            isCrawling = false;
+        }, 280);
+    }
+});
+
+// Expand / color shift on interactive elements
 document.querySelectorAll('a, button, .project-card, .skill-card, .edu-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(2.5)';
-        cursor.style.background = 'var(--gold)';
-        follower.style.width = '60px';
-        follower.style.height = '60px';
-        follower.style.borderColor = 'var(--gold)';
+        spider.style.color = 'var(--gold)';
+        spider.style.filter = 'drop-shadow(0 0 8px rgba(190, 154, 96, 0.6))';
+        spider.style.transform = 'translate(-50%, -50%) scale(1.35)';
     });
     el.addEventListener('mouseleave', () => {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.background = 'var(--pink)';
-        follower.style.width = '36px';
-        follower.style.height = '36px';
-        follower.style.borderColor = 'var(--pink)';
+        spider.style.color = 'var(--pink)';
+        spider.style.filter = 'drop-shadow(0 0 4px rgba(204, 136, 153, 0.45))';
+        spider.style.transform = 'translate(-50%, -50%) scale(1)';
     });
 });
 
@@ -56,7 +76,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ── Intersection Observer for scroll reveals ──
 const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -40px 0px' };
-
 const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -65,30 +84,22 @@ const revealObserver = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Generic reveal elements
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-// Section headings underline animation
 document.querySelectorAll('.section-heading').forEach(el => revealObserver.observe(el));
-
-// Edu cards
 document.querySelectorAll('.edu-card').forEach(el => revealObserver.observe(el));
 
-// Project cards with stagger
 const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.1}s`;
     revealObserver.observe(card);
 });
 
-// Skill cards with stagger
 const skillCards = document.querySelectorAll('.skill-card');
 skillCards.forEach((card, i) => {
     card.style.transitionDelay = `${i * 0.08}s`;
     revealObserver.observe(card);
 });
 
-// Stagger parent containers
 document.querySelectorAll('.stagger-parent').forEach(el => revealObserver.observe(el));
 
 // ── Typing effect for hero subtitle ──
@@ -106,13 +117,12 @@ if (heroSubtitle) {
     }, 900);
 }
 
-// ── Parallax on hero orb / grid ──
+// ── Parallax on hero ──
 document.addEventListener('mousemove', (e) => {
     const hero = document.getElementById('home');
     if (!hero) return;
     const rect = hero.getBoundingClientRect();
     if (e.clientY > rect.bottom) return;
-
     const x = (e.clientX / window.innerWidth - 0.5) * 20;
     const y = (e.clientY / window.innerHeight - 0.5) * 20;
     hero.style.setProperty('--parallax-x', `${x}px`);
@@ -122,7 +132,6 @@ document.addEventListener('mousemove', (e) => {
 // ── Active nav link highlighting ──
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('#navbar ul a');
-
 const navObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -136,10 +145,8 @@ const navObserver = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.4 });
-
 sections.forEach(s => navObserver.observe(s));
 
-// Add active nav style dynamically
 const style = document.createElement('style');
 style.textContent = `
     #navbar ul a.active-nav {
@@ -157,7 +164,6 @@ function animateCount(el) {
     const suffix = el.getAttribute('data-suffix') || '';
     const duration = 1200;
     const start = performance.now();
-
     function update(now) {
         const elapsed = now - start;
         const progress = Math.min(elapsed / duration, 1);
@@ -177,7 +183,6 @@ const counterObserver = new IntersectionObserver((entries) => {
         }
     });
 }, { threshold: 0.5 });
-
 document.querySelectorAll('.edu-card').forEach(card => counterObserver.observe(card));
 
 // ── Page load fade-in ──
