@@ -28,37 +28,61 @@ body {
     cursor: none;
 }
 
-/* ── Custom Cursor ── */
-.cursor {
-    width: 12px;
-    height: 12px;
-    background: var(--pink);
-    border-radius: 50%;
+/* ── Spider Cursor (Spider-Gwen inspired) ── */
+.spider-cursor {
     position: fixed;
-    top: 0; left: 0;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
     pointer-events: none;
     z-index: 9999;
+    color: var(--pink);
     transform: translate(-50%, -50%);
-    transition: transform 0.1s ease, background 0.3s ease;
+    transition: color 0.25s ease, filter 0.25s ease;
+    filter: drop-shadow(0 0 4px rgba(204, 136, 153, 0.45));
+    will-change: transform;
 }
 
-.cursor-follower {
-    width: 36px;
-    height: 36px;
-    border: 1.5px solid var(--pink);
-    border-radius: 50%;
+.spider-cursor.crawl .leg {
+    animation: legCrawl 0.35s ease-in-out infinite alternate;
+}
+
+.spider-cursor.crawl .leg-1 { animation-delay: 0s; }
+.spider-cursor.crawl .leg-2 { animation-delay: 0.05s; }
+.spider-cursor.crawl .leg-3 { animation-delay: 0.1s; }
+.spider-cursor.crawl .leg-4 { animation-delay: 0.02s; }
+.spider-cursor.crawl .leg-5 { animation-delay: 0.07s; }
+.spider-cursor.crawl .leg-6 { animation-delay: 0.12s; }
+
+@keyframes legCrawl {
+    from { transform: rotate(-8deg); }
+    to   { transform: rotate(8deg); }
+}
+
+.spider-cursor svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.spider-cursor .leg {
+    transform-origin: center;
+    transition: d 0.15s ease;
+}
+
+/* subtle web trail */
+.spider-web {
     position: fixed;
-    top: 0; left: 0;
     pointer-events: none;
-    z-index: 9998;
+    z-index: 9997;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: rgba(204, 136, 153, 0.35);
+    opacity: 0;
     transform: translate(-50%, -50%);
-    transition: transform 0.18s ease, border-color 0.3s ease, width 0.3s, height 0.3s;
-    opacity: 0.7;
 }
-
-body:hover .cursor { opacity: 1; }
-
-a:hover ~ .cursor, button:hover ~ .cursor { transform: translate(-50%, -50%) scale(2); }
 
 /* ── Noise Texture Overlay ── */
 body::before {
@@ -135,7 +159,6 @@ body::before {
     overflow: hidden;
 }
 
-/* Animated background grid */
 #home::before {
     content: '';
     position: absolute;
@@ -152,7 +175,6 @@ body::before {
     100% { transform: translateY(60px) translateX(60px); }
 }
 
-/* Floating orbs */
 #home::after {
     content: '';
     position: absolute;
@@ -646,7 +668,6 @@ body::before {
     transform: translateY(0);
 }
 
-/* staggered children */
 .stagger-parent .stagger-child {
     opacity: 0;
     transform: translateY(20px);
@@ -660,12 +681,11 @@ body::before {
 .stagger-parent.visible .stagger-child:nth-child(5) { transition-delay: 0.45s; opacity: 1; transform: translateY(0); }
 .stagger-parent.visible .stagger-child:nth-child(6) { transition-delay: 0.55s; opacity: 1; transform: translateY(0); }
 
-/* edu card stagger */
 .edu-stack .edu-card:nth-child(1) { transition: all 0.5s ease 0.05s; }
 .edu-stack .edu-card:nth-child(2) { transition: all 0.5s ease 0.18s; }
 .edu-stack .edu-card:nth-child(3) { transition: all 0.5s ease 0.32s; }
 
-/* ── Marquee strip between sections ── */
+/* ── Marquee strip ── */
 .marquee-strip {
     background: var(--pink);
     padding: 0.75rem 0;
@@ -700,16 +720,6 @@ body::before {
     margin-bottom: 1.5rem;
 }
 
-/* ── Misc utilities ── */
-.bg-pink { background-color: var(--pink); }
-.bg-light-pink { background-color: var(--light-pink); }
-.bg-light-green { background-color: var(--light-green); }
-.bg-dark-gray { background-color: var(--dark-gray); }
-.text-pink { color: var(--pink); }
-.text-dark-gray { color: var(--dark-gray); }
-.text-gold { color: var(--gold); }
-.bg-gold { background-color: var(--gold); }
-
 /* ── Responsive ── */
 @media (max-width: 768px) {
     #navbar ul { gap: 1rem; }
@@ -717,4 +727,5 @@ body::before {
     .hero-content h1 { font-size: 2.2rem; }
     .hero-content p { font-size: 0.8rem; }
     #home::after { width: 300px; height: 300px; }
+    .spider-cursor { width: 22px; height: 22px; }
 }
