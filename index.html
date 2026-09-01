@@ -12,21 +12,49 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 font-sans">
+    <!-- Decorative corner spider webs (Spider-Gwen) -->
+    <div class="web-corner web-top-left" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0 L200 0 M0 0 L0 200" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.35"/>
+            <path d="M0 0 Q40 20 80 10 Q120 0 160 25 Q180 40 200 30" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M0 0 Q20 40 10 80 Q0 120 25 160 Q40 180 30 200" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M0 0 L90 90 M0 0 L50 120 M0 0 L120 50 M0 0 L70 40 M0 0 L40 70" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M20 20 Q60 50 100 40 Q140 30 170 60" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <path d="M15 40 Q45 70 80 65 Q110 60 140 90" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <circle cx="0" cy="0" r="4" fill="currentColor" opacity="0.5"/>
+        </svg>
+    </div>
+    <div class="web-corner web-bottom-right" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M200 200 L0 200 M200 200 L200 0" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.35"/>
+            <path d="M200 200 Q160 180 120 190 Q80 200 40 175 Q20 160 0 170" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M200 200 Q180 160 190 120 Q200 80 175 40 Q160 20 170 0" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M200 200 L110 110 M200 200 L150 80 M200 200 L80 150 M200 200 L130 160 M200 200 L160 130" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M180 180 Q140 150 100 160 Q60 170 30 140" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <path d="M185 160 Q155 130 120 135 Q90 140 60 110" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <circle cx="200" cy="200" r="4" fill="currentColor" opacity="0.5"/>
+        </svg>
+    </div>
+    <div class="web-corner web-top-right" aria-hidden="true">
+        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M160 0 L0 0 M160 0 L160 160" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.28"/>
+            <path d="M160 0 Q130 25 100 15 Q70 5 40 30 Q20 45 0 35" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.32"/>
+            <path d="M160 0 Q140 40 150 70 Q160 100 140 130 Q125 150 135 160" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.32"/>
+            <path d="M160 0 L85 75 M160 0 L110 40 M160 0 L50 90" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.22"/>
+            <circle cx="160" cy="0" r="3" fill="currentColor" opacity="0.4"/>
+        </svg>
+    </div>
+
     <!-- Custom Spider Cursor (Spider-Gwen inspired) -->
     <div class="spider-cursor" id="spiderCursor">
         <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <!-- body -->
             <ellipse cx="32" cy="34" rx="10" ry="12" fill="currentColor"/>
-            <!-- head -->
             <circle cx="32" cy="20" r="7" fill="currentColor"/>
-            <!-- eyes -->
             <circle cx="29" cy="18" r="1.6" fill="#FAF7F2"/>
             <circle cx="35" cy="18" r="1.6" fill="#FAF7F2"/>
-            <!-- legs left -->
             <path class="leg leg-1" d="M22 28 Q8 18 4 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-2" d="M22 34 Q6 34 2 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-3" d="M22 40 Q8 48 4 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
-            <!-- legs right -->
             <path class="leg leg-4" d="M42 28 Q56 18 60 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-5" d="M42 34 Q58 34 62 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-6" d="M42 40 Q56 48 60 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
@@ -294,8 +322,12 @@
             </div>
             <div class="flex flex-col items-center space-y-6 reveal" style="transition-delay:0.15s">
                 <div class="contact-line text-center">
-                    <span class="label">Email</span>
+                    <span class="label">Personal</span>
                     <a href="mailto:786shaikthaslim@gmail.com">786shaikthaslim@gmail.com</a>
+                </div>
+                <div class="contact-line text-center">
+                    <span class="label">University</span>
+                    <a href="mailto:av.sc.u4aie23138@av.students.amrita.edu">av.sc.u4aie23138@av.students.amrita.edu</a>
                 </div>
                 <div class="contact-line text-center">
                     <span class="label">Phone</span>
