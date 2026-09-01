@@ -12,10 +12,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-gray-100 font-sans">
-
-    <!-- Custom Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
+    <!-- Custom Spider Cursor (Spider-Gwen inspired) -->
+    <div class="spider-cursor" id="spiderCursor">
+        <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- body -->
+            <ellipse cx="32" cy="34" rx="10" ry="12" fill="currentColor"/>
+            <!-- head -->
+            <circle cx="32" cy="20" r="7" fill="currentColor"/>
+            <!-- eyes -->
+            <circle cx="29" cy="18" r="1.6" fill="#FAF7F2"/>
+            <circle cx="35" cy="18" r="1.6" fill="#FAF7F2"/>
+            <!-- legs left -->
+            <path class="leg leg-1" d="M22 28 Q8 18 4 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-2" d="M22 34 Q6 34 2 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-3" d="M22 40 Q8 48 4 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <!-- legs right -->
+            <path class="leg leg-4" d="M42 28 Q56 18 60 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-5" d="M42 34 Q58 34 62 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-6" d="M42 40 Q56 48 60 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+        </svg>
+    </div>
+    <div class="spider-web" id="spiderWeb"></div>
 
     <!-- Navbar -->
     <nav id="navbar" class="text-white py-4 fixed w-full top-0 z-50">
@@ -39,8 +56,8 @@
                 — AI / ML Engineer &amp; Developer —
             </p>
             <h1>Hello, I'm <span>Shaik Thaslim</span></h1>
-            <p class="mt-4 mb-8 hero-subtitle" data-text="AI/ML and Software Developer · Full Stack Developer · Deep Learning, NLP · Robotics">
-                AI/ML and Software Developer · Full Stack Developer · Deep Learning, NLP · Robotics
+            <p class="mt-4 mb-8 hero-subtitle" data-text="AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics">
+                AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics
             </p>
             <a href="#projects" class="hero-btn">View My Work</a>
         </div>
@@ -56,24 +73,26 @@
             <span>Machine Learning</span><span>·</span>
             <span>Deep Learning</span><span>·</span>
             <span>NLP</span><span>·</span>
+            <span>LLMs</span><span>·</span>
             <span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span>
+            <span>Databricks</span><span>·</span>
             <span>ROS 2</span><span>·</span>
             <span>Flask</span><span>·</span>
-            <span>TensorFlow</span><span>·</span>
-            <span>Full Stack</span><span>·</span>
+            <span>Transformers</span><span>·</span>
             <span>REST APIs</span><span>·</span>
-            <span>Robotics</span><span>·</span>
             <span>Python</span><span>·</span>
             <span>Machine Learning</span><span>·</span>
             <span>Deep Learning</span><span>·</span>
             <span>NLP</span><span>·</span>
+            <span>LLMs</span><span>·</span>
             <span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span>
+            <span>Databricks</span><span>·</span>
             <span>ROS 2</span><span>·</span>
             <span>Flask</span><span>·</span>
-            <span>TensorFlow</span><span>·</span>
-            <span>Full Stack</span><span>·</span>
+            <span>Transformers</span><span>·</span>
             <span>REST APIs</span><span>·</span>
-            <span>Robotics</span><span>·</span>
         </div>
     </div>
 
@@ -85,8 +104,8 @@
             </div>
             <div class="max-w-3xl mx-auto reveal" style="transition-delay:0.15s">
                 <p class="about-text text-center">
-                    I am a B.Tech student in Artificial Intelligence and Engineering with hands-on experience in building scalable systems, REST APIs, and real-time applications. 
-                    I focus on developing solutions with a user-centric approach and have experience leading teams, understanding individual strengths, and collaborating effectively to deliver impactful results.
+                    I am a B.Tech student in Artificial Intelligence and Engineering focused on building intelligent systems — from LLM-powered applications and NLP pipelines to scalable data engineering and robotics. 
+                    I work across AI/ML, backend development with Flask, and full-stack delivery, combining research-oriented models with practical, production-ready solutions.
                 </p>
             </div>
         </div>
@@ -102,7 +121,7 @@
                 <div class="edu-card">
                     <h3>Bachelor of Technology in Artificial Intelligence and Engineering</h3>
                     <p class="edu-meta">Amrita Vishwa Vidyapeetham, Amaravati &nbsp;·&nbsp; 2023 – 2027</p>
-                    <p class="edu-grade">CGPA: <span data-count="9.01">9.01</span></p>
+                    <p class="edu-grade">CGPA: <span data-count="8.94">8.94</span> <span style="font-weight:400; opacity:0.85;">(as of 6th semester)</span></p>
                 </div>
                 <div class="edu-card">
                     <h3>Intermediate</h3>
@@ -127,85 +146,97 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <div class="project-card">
-                    <p class="project-num">01 / ML &amp; BACKEND</p>
-                    <h3>AI-driven Goal Planning System</h3>
+                    <p class="project-num">01 / DATA ENGINEERING</p>
+                    <h3>Databricks Lakehouse Data Engineering Pipeline</h3>
                     <p class="project-desc">
-                        Developed REST APIs with authentication and goal tracking using modular backend architecture.
+                        Built a scalable data engineering pipeline on Databricks using the Medallion (Bronze–Silver–Gold) architecture with PySpark and Delta Lake. Improved ETL performance by 38% and achieved 99.6% data quality.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Delta Lake</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Amazon S3</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <p class="project-num">02 / NLP &amp; LLMs</p>
+                    <h3>Hinglish Toxic Comment Detection &amp; Rewriter</h3>
+                    <p class="project-desc">
+                        Multilingual NLP pipeline using XLM-RoBERTa for toxicity detection and Mistral 2B for semantic-preserving rewriting on 29K+ samples. Achieved 81.24% detection accuracy with REST APIs and MongoDB storage.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">XLM-RoBERTa</span>
+                        <span class="tech-tag">Mistral 2B</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <p class="project-num">03 / LLMs &amp; FULL-STACK</p>
+                    <h3>LLM-Based Personalized Goal Planning System</h3>
+                    <p class="project-desc">
+                        Full-stack Flask application that generates personalized day-wise goal roadmaps from user objectives and timelines using LLMs. Achieved 93% roadmap relevance across evaluation scenarios.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">HTML/CSS</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">HTML/CSS/JS</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <p class="project-num">02 / NLP</p>
-                    <h3>Hinglish Toxic Comment Detection &amp; Rewriter</h3>
+                    <p class="project-num">04 / MACHINE LEARNING</p>
+                    <h3>Resume Screening Using Ensemble Models</h3>
                     <p class="project-desc">
-                        Designed an NLP pipeline using transformer models for toxicity detection and rewriting on 29K+ samples.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">NLP</span>
-                        <span class="tech-tag">Transformers</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <p class="project-num">03 / MACHINE LEARNING</p>
-                    <h3>ML-based Resume Screening</h3>
-                    <p class="project-desc">
-                        Developed an ensemble model using SMOTE and PCA for resume classification.
+                        Ensemble-based resume classification system using Voting Classifier as the final model, with SMOTE for class imbalance and PCA for dimensionality reduction. Published as IEEE paper.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Voting Classifier</span>
+                        <span class="tech-tag">SMOTE</span>
+                        <span class="tech-tag">PCA</span>
                         <span class="tech-tag">Pandas</span>
-                        <span class="tech-tag">NumPy</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <p class="project-num">04 / DEEP LEARNING</p>
-                    <h3>Post-COVID Lung Fibrosis Detection</h3>
+                    <p class="project-num">05 / DEEP LEARNING</p>
+                    <h3>Post-COVID Lung Fibrosis Detection using Chest X-rays</h3>
                     <p class="project-desc">
-                        Built deep learning models for medical image classification using transfer learning.
+                        Deep learning pipeline for medical image classification of post-COVID lung fibrosis from chest X-rays. Final model: DenseNet121 with attention mechanism for improved feature focus.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DenseNet121</span>
+                        <span class="tech-tag">Attention</span>
                         <span class="tech-tag">TensorFlow</span>
                         <span class="tech-tag">OpenCV</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <p class="project-num">05 / ROBOTICS</p>
-                    <h3>Autonomous Underwater Robot</h3>
+                    <p class="project-num">06 / ROBOTICS &amp; ML</p>
+                    <h3>Autonomous Underwater Robot for Medicinal Coral Reef Classification</h3>
                     <p class="project-desc">
-                        Simulated underwater robot using ROS 2 and Gazebo with navigation and vision pipeline.
+                        ROS 2-based autonomous underwater robot with navigation and machine learning pipelines for medicinal coral reef classification. Achieved 84.4% accuracy and 92% precision in simulation (Gazebo).
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">ROS 2</span>
-                        <span class="tech-tag">Gazebo</span>
-                        <span class="tech-tag">Blender</span>
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">OpenCV</span>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <p class="project-num">06 / FRONTEND</p>
-                    <h3>Recipe Finder</h3>
-                    <p class="project-desc">
-                        Developed a frontend application to search recipes based on ingredients.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Gazebo</span>
+                        <span class="tech-tag">Linux</span>
                     </div>
                 </div>
 
@@ -220,43 +251,36 @@
                 <h2 class="section-heading">Technical Skills</h2>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-
                 <div class="skill-card">
                     <div class="skill-icon">⌨</div>
                     <h3>Languages</h3>
-                    <p>Python, Java, C</p>
+                    <p>Python, SQL, Java</p>
                 </div>
-
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>AI / ML</h3>
+                    <p>Machine Learning, Deep Learning, NLP, LLMs, Computer Vision, Transformers</p>
+                </div>
                 <div class="skill-card">
                     <div class="skill-icon">⚙</div>
                     <h3>Development</h3>
-                    <p>REST APIs, Flask, JavaScript, HTML, CSS</p>
+                    <p>Flask, REST APIs, HTML, CSS, JavaScript</p>
                 </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Machine Learning</h3>
-                    <p>Scikit-learn, TensorFlow, NLP, Computer Vision</p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🛠</div>
-                    <h3>Tools</h3>
-                    <p>Git, GitHub, ROS 2, Gazebo, Blender</p>
-                </div>
-
                 <div class="skill-card">
                     <div class="skill-icon">🗄</div>
-                    <h3>Database</h3>
-                    <p>MySQL, SQLite, MongoDB</p>
+                    <h3>Data &amp; Engineering</h3>
+                    <p>PySpark, Databricks, Delta Lake, ETL, MySQL, MongoDB, SQLite</p>
                 </div>
-
+                <div class="skill-card">
+                    <div class="skill-icon">🛠</div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <p>Git, GitHub, Linux, ROS 2, Gazebo, Amazon S3</p>
+                </div>
                 <div class="skill-card">
                     <div class="skill-icon">💡</div>
                     <h3>Core CS</h3>
                     <p>DSA, OOP, DBMS, OS, Computer Networks</p>
                 </div>
-
             </div>
         </div>
     </section>
