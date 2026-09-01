@@ -28,24 +28,69 @@ body {
     cursor: none;
 }
 
+/* ── Corner Spider Webs (Spider-Gwen) ── */
+.web-corner {
+    position: fixed;
+    pointer-events: none;
+    z-index: 5;
+    color: var(--pink);
+    opacity: 0.55;
+}
+
+.web-top-left {
+    top: 0;
+    left: 0;
+    width: min(280px, 42vw);
+    height: min(280px, 42vw);
+    animation: webBreathe 8s ease-in-out infinite;
+}
+
+.web-top-right {
+    top: 0;
+    right: 0;
+    width: min(180px, 28vw);
+    height: min(180px, 28vw);
+    opacity: 0.4;
+    animation: webBreathe 10s ease-in-out infinite 0.6s;
+}
+
+.web-bottom-right {
+    bottom: 0;
+    right: 0;
+    width: min(260px, 38vw);
+    height: min(260px, 38vw);
+    animation: webBreathe 9s ease-in-out infinite 1.2s;
+}
+
+.web-corner svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+@keyframes webBreathe {
+    0%, 100% { opacity: 0.42; }
+    50% { opacity: 0.72; }
+}
+
 /* ── Spider Cursor (Spider-Gwen inspired) ── */
 .spider-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     pointer-events: none;
     z-index: 9999;
     color: var(--pink);
     transform: translate(-50%, -50%);
-    transition: color 0.25s ease, filter 0.25s ease;
-    filter: drop-shadow(0 0 4px rgba(204, 136, 153, 0.45));
+    transition: color 0.25s ease, filter 0.25s ease, transform 0.2s ease;
+    filter: drop-shadow(0 0 6px rgba(204, 136, 153, 0.55));
     will-change: transform;
 }
 
 .spider-cursor.crawl .leg {
-    animation: legCrawl 0.35s ease-in-out infinite alternate;
+    animation: legCrawl 0.32s ease-in-out infinite alternate;
 }
 
 .spider-cursor.crawl .leg-1 { animation-delay: 0s; }
@@ -56,8 +101,8 @@ body {
 .spider-cursor.crawl .leg-6 { animation-delay: 0.12s; }
 
 @keyframes legCrawl {
-    from { transform: rotate(-8deg); }
-    to   { transform: rotate(8deg); }
+    from { transform: rotate(-10deg); }
+    to   { transform: rotate(10deg); }
 }
 
 .spider-cursor svg {
@@ -68,20 +113,20 @@ body {
 
 .spider-cursor .leg {
     transform-origin: center;
-    transition: d 0.15s ease;
 }
 
-/* subtle web trail */
 .spider-web {
     position: fixed;
     pointer-events: none;
     z-index: 9997;
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 3px;
     border-radius: 50%;
-    background: rgba(204, 136, 153, 0.35);
+    background: rgba(204, 136, 153, 0.4);
+    box-shadow: 0 0 8px rgba(204, 136, 153, 0.35);
     opacity: 0;
     transform: translate(-50%, -50%);
+    transition: opacity 0.2s ease;
 }
 
 /* ── Noise Texture Overlay ── */
@@ -157,6 +202,7 @@ body::before {
     background: var(--dark-gray);
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 0 120px rgba(204, 136, 153, 0.12);
 }
 
 #home::before {
@@ -239,9 +285,16 @@ body::before {
     overflow: hidden;
     opacity: 0;
     transform: translateY(20px);
-    animation: heroReveal 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.75s forwards;
-    transition: color 0.4s ease;
     z-index: 1;
+    transition: color 0.4s ease;
+    box-shadow: 0 0 0 0 rgba(204, 136, 153, 0.35);
+    animation: heroReveal 0.9s cubic-bezier(0.4, 0, 0.2, 1) 0.75s forwards,
+               gwenPulse 2.8s ease-in-out 1.8s infinite;
+}
+
+@keyframes gwenPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(204, 136, 153, 0.35); }
+    50% { box-shadow: 0 0 18px 4px rgba(204, 136, 153, 0.28); }
 }
 
 .hero-btn::before {
@@ -314,6 +367,7 @@ body::before {
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 12px rgba(204, 136, 153, 0.45);
 }
 
 .section-heading.visible::after {
@@ -353,6 +407,16 @@ body::before {
     padding: 7rem 0;
     position: relative;
     overflow: hidden;
+}
+
+#education::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(204,136,153,0.08) 0%, transparent 42%),
+        radial-gradient(circle at 88% 78%, rgba(190,154,96,0.06) 0%, transparent 40%);
+    pointer-events: none;
 }
 
 #education .section-heading {
@@ -458,7 +522,10 @@ body::before {
 
 .project-card:hover {
     transform: translateY(-8px) !important;
-    box-shadow: 0 24px 60px rgba(67,67,67,0.12), 0 0 0 1px rgba(204, 136, 153, 0.2);
+    box-shadow:
+        0 24px 60px rgba(67, 67, 67, 0.12),
+        0 0 0 1px rgba(204, 136, 153, 0.28),
+        0 0 40px rgba(204, 136, 153, 0.12) !important;
 }
 
 .project-card:hover::after {
@@ -519,6 +586,16 @@ body::before {
     position: relative;
 }
 
+#skills::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        radial-gradient(circle at 12% 18%, rgba(204,136,153,0.08) 0%, transparent 42%),
+        radial-gradient(circle at 88% 78%, rgba(190,154,96,0.06) 0%, transparent 40%);
+    pointer-events: none;
+}
+
 #skills .section-heading {
     color: var(--cream);
 }
@@ -547,7 +624,10 @@ body::before {
 .skill-card:hover {
     background: rgba(255,255,255,0.06);
     border-color: rgba(204, 136, 153, 0.2);
-    box-shadow: 0 0 40px rgba(204, 136, 153, 0.08), inset 0 0 40px rgba(204, 136, 153, 0.03);
+    box-shadow:
+        0 0 40px rgba(204, 136, 153, 0.12),
+        inset 0 0 40px rgba(204, 136, 153, 0.05),
+        0 0 0 1px rgba(204, 136, 153, 0.18);
 }
 
 .skill-card .skill-icon {
@@ -728,4 +808,11 @@ body::before {
     .hero-content p { font-size: 0.8rem; }
     #home::after { width: 300px; height: 300px; }
     .spider-cursor { width: 22px; height: 22px; }
+    .web-top-left { width: 160px; height: 160px; opacity: 0.35; }
+    .web-bottom-right { width: 140px; height: 140px; opacity: 0.3; }
+    .web-top-right { display: none; }
+}
+
+@media (max-width: 480px) {
+    .web-corner { opacity: 0.25; }
 }
