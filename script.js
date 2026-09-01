@@ -18,7 +18,6 @@ function animateSpider() {
     spider.style.left = spiderX + 'px';
     spider.style.top = spiderY + 'px';
 
-    // subtle trail
     if (web) {
         web.style.left = spiderX + 'px';
         web.style.top = spiderY + 'px';
