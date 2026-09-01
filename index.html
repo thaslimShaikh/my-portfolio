@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaik Thaslim — Portfolio</title>
-
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,82 +11,61 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
-
-<body>
-
-    <!-- Spider-Gwen-inspired hand-drawn web layer -->
-    <div class="web-banner" aria-hidden="true">
-        <svg viewBox="0 0 1440 330" xmlns="http://www.w3.org/2000/svg"
-             preserveAspectRatio="none">
-
-            <!-- LEFT CORNER: dense web like the reference -->
-            <g class="web-ink web-left">
-                <path d="M-20 0 Q80 30 175 92 Q245 138 320 170" />
-                <path d="M-8 32 Q78 55 158 108 Q235 158 320 170" />
-                <path d="M-4 72 Q75 82 150 126 Q225 171 320 170" />
-                <path d="M-4 112 Q78 110 150 142 Q235 181 320 170" />
-                <path d="M-2 154 Q82 145 158 157 Q240 185 320 170" />
-
-                <path d="M0 0 L320 170" />
-                <path d="M0 35 L270 166" />
-                <path d="M0 80 L235 168" />
-                <path d="M0 128 L200 170" />
-                <path d="M0 185 L175 172" />
-                <path d="M0 235 L165 175" />
-                <path d="M35 0 L120 170" />
-                <path d="M95 0 L170 170" />
-                <path d="M160 0 L215 170" />
-                <path d="M225 0 L255 170" />
-
-                <!-- loose lower threads -->
-                <path d="M110 158 Q108 205 113 250" />
-                <path d="M175 169 Q175 222 178 282" />
-                <path d="M245 170 Q245 210 248 245" />
-            </g>
-
-            <!-- RIGHT CORNER -->
-            <g class="web-ink web-right">
-                <path d="M1460 0 Q1370 28 1290 88 Q1215 143 1140 195" />
-                <path d="M1460 40 Q1375 58 1300 108 Q1225 158 1140 195" />
-                <path d="M1460 82 Q1380 92 1310 132 Q1235 175 1140 195" />
-                <path d="M1460 126 Q1385 130 1320 153 Q1250 184 1140 195" />
-
-                <path d="M1440 0 L1140 195" />
-                <path d="M1440 48 L1190 190" />
-                <path d="M1440 100 L1235 188" />
-                <path d="M1440 155 L1280 188" />
-                <path d="M1410 0 L1335 185" />
-                <path d="M1340 0 L1280 185" />
-                <path d="M1270 0 L1220 190" />
-                <path d="M1200 0 L1175 190" />
-
-                <path d="M1280 185 Q1282 230 1280 270" />
-                <path d="M1215 190 Q1217 240 1216 302" />
-                <path d="M1148 194 Q1150 238 1150 278" />
-            </g>
+<body class="bg-gray-100 font-sans">
+    <!-- Decorative corner spider webs (Spider-Gwen) -->
+    <div class="web-corner web-top-left" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0 L200 0 M0 0 L0 200" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.35"/>
+            <path d="M0 0 Q40 20 80 10 Q120 0 160 25 Q180 40 200 30" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M0 0 Q20 40 10 80 Q0 120 25 160 Q40 180 30 200" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M0 0 L90 90 M0 0 L50 120 M0 0 L120 50 M0 0 L70 40 M0 0 L40 70" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M20 20 Q60 50 100 40 Q140 30 170 60" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <path d="M15 40 Q45 70 80 65 Q110 60 140 90" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <circle cx="0" cy="0" r="4" fill="currentColor" opacity="0.5"/>
         </svg>
     </div>
+    <div class="web-corner web-bottom-right" aria-hidden="true">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M200 200 L0 200 M200 200 L200 0" stroke="currentColor" stroke-width="0.8" fill="none" opacity="0.35"/>
+            <path d="M200 200 Q160 180 120 190 Q80 200 40 175 Q20 160 0 170" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M200 200 Q180 160 190 120 Q200 80 175 40 Q160 20 170 0" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.4"/>
+            <path d="M200 200 L110 110 M200 200 L150 80 M200 200 L80 150 M200 200 L130 160 M200 200 L160 130" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.3"/>
+            <path d="M180 180 Q140 150 100 160 Q60 170 30 140" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <path d="M185 160 Q155 130 120 135 Q90 140 60 110" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.25"/>
+            <circle cx="200" cy="200" r="4" fill="currentColor" opacity="0.5"/>
+        </svg>
+    </div>
+    <div class="web-corner web-top-right" aria-hidden="true">
+        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <path d="M160 0 L0 0 M160 0 L160 160" stroke="currentColor" stroke-width="0.7" fill="none" opacity="0.28"/>
+            <path d="M160 0 Q130 25 100 15 Q70 5 40 30 Q20 45 0 35" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.32"/>
+            <path d="M160 0 Q140 40 150 70 Q160 100 140 130 Q125 150 135 160" stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.32"/>
+            <path d="M160 0 L85 75 M160 0 L110 40 M160 0 L50 90" stroke="currentColor" stroke-width="0.5" fill="none" opacity="0.22"/>
+            <circle cx="160" cy="0" r="3" fill="currentColor" opacity="0.4"/>
+        </svg>
     </div>
 
-    <!-- Tiny spider follows the cursor -->
-    <div class="spider-cursor" id="spiderCursor" aria-hidden="true">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="32" cy="35" rx="10" ry="12" fill="currentColor"/>
+    <!-- Custom Spider Cursor (Spider-Gwen inspired) -->
+    <div class="spider-cursor" id="spiderCursor">
+        <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="32" cy="34" rx="10" ry="12" fill="currentColor"/>
             <circle cx="32" cy="20" r="7" fill="currentColor"/>
-            <circle cx="29.5" cy="18.5" r="1.4" fill="#FAF7F2"/>
-            <circle cx="34.5" cy="18.5" r="1.4" fill="#FAF7F2"/>
-            <path class="leg" d="M23 28 Q10 19 4 9"/>
-            <path class="leg" d="M22 34 Q8 31 2 27"/>
-            <path class="leg" d="M22 40 Q9 47 4 56"/>
-            <path class="leg" d="M41 28 Q54 19 60 9"/>
-            <path class="leg" d="M42 34 Q56 31 62 27"/>
-            <path class="leg" d="M42 40 Q55 47 60 56"/>
+            <circle cx="29" cy="18" r="1.6" fill="#FAF7F2"/>
+            <circle cx="35" cy="18" r="1.6" fill="#FAF7F2"/>
+            <path class="leg leg-1" d="M22 28 Q8 18 4 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-2" d="M22 34 Q6 34 2 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-3" d="M22 40 Q8 48 4 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-4" d="M42 28 Q56 18 60 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-5" d="M42 34 Q58 34 62 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+            <path class="leg leg-6" d="M42 40 Q56 48 60 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
         </svg>
     </div>
+    <div class="spider-web" id="spiderWeb"></div>
 
+    <!-- Navbar -->
     <nav id="navbar" class="text-white py-4 fixed w-full top-0 z-50">
         <div class="container mx-auto flex justify-between items-center px-6">
-            <h1>Shaik Thaslim</h1>
+            <h1 class="text-2xl font-bold">Shaik Thaslim</h1>
             <ul class="flex space-x-6">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -99,226 +77,274 @@
         </div>
     </nav>
 
+    <!-- Hero -->
     <section id="home" class="h-screen flex items-center justify-center text-center">
-        <div class="hero-pink-glow"></div>
         <div class="hero-content">
-            <p class="hero-kicker">— AI / ML ENGINEER &amp; DEVELOPER —</p>
+            <p style="font-family:'Space Mono',monospace; font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--pink); margin-bottom:1.2rem; opacity:0; animation: heroReveal 0.8s ease 0.1s forwards;">
+                — AI / ML Engineer &amp; Developer —
+            </p>
             <h1>Hello, I'm <span>Shaik Thaslim</span></h1>
-            <p class="mt-4 mb-8 hero-subtitle"
-               data-text="AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics">
+            <p class="mt-4 mb-8 hero-subtitle" data-text="AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics">
                 AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics
             </p>
-            <a href="#projects" class="hero-btn">View My Work <span>↗</span></a>
+            <a href="#projects" class="hero-btn">View My Work</a>
         </div>
-
-        <div class="hero-web-word" aria-hidden="true">THINK<br>BEYOND</div>
         <div class="scroll-indicator">
             <span></span>
-            <small>SCROLL</small>
         </div>
     </section>
 
+    <!-- Marquee Strip -->
     <div class="marquee-strip">
         <div class="marquee-inner">
-            <span>Python</span><b>✦</b><span>Machine Learning</span><b>✦</b>
-            <span>Deep Learning</span><b>✦</b><span>NLP</span><b>✦</b>
-            <span>LLMs</span><b>✦</b><span>Computer Vision</span><b>✦</b>
-            <span>PySpark</span><b>✦</b><span>Databricks</span><b>✦</b>
-            <span>ROS 2</span><b>✦</b><span>Flask</span><b>✦</b>
-            <span>Transformers</span><b>✦</b><span>REST APIs</span><b>✦</b>
-            <span>Python</span><b>✦</b><span>Machine Learning</span><b>✦</b>
-            <span>Deep Learning</span><b>✦</b><span>NLP</span><b>✦</b>
-            <span>LLMs</span><b>✦</b><span>Computer Vision</span><b>✦</b>
-            <span>PySpark</span><b>✦</b><span>Databricks</span><b>✦</b>
-            <span>ROS 2</span><b>✦</b><span>Flask</span><b>✦</b>
-            <span>Transformers</span><b>✦</b><span>REST APIs</span><b>✦</b>
+            <span>Python</span><span>·</span>
+            <span>Machine Learning</span><span>·</span>
+            <span>Deep Learning</span><span>·</span>
+            <span>NLP</span><span>·</span>
+            <span>LLMs</span><span>·</span>
+            <span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span>
+            <span>Databricks</span><span>·</span>
+            <span>ROS 2</span><span>·</span>
+            <span>Flask</span><span>·</span>
+            <span>Transformers</span><span>·</span>
+            <span>REST APIs</span><span>·</span>
+            <span>Python</span><span>·</span>
+            <span>Machine Learning</span><span>·</span>
+            <span>Deep Learning</span><span>·</span>
+            <span>NLP</span><span>·</span>
+            <span>LLMs</span><span>·</span>
+            <span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span>
+            <span>Databricks</span><span>·</span>
+            <span>ROS 2</span><span>·</span>
+            <span>Flask</span><span>·</span>
+            <span>Transformers</span><span>·</span>
+            <span>REST APIs</span><span>·</span>
         </div>
     </div>
 
+    <!-- About -->
     <section id="about" class="py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12 reveal">
-                <p class="section-kicker">01 / PROFILE</p>
                 <h2 class="section-heading">About Me</h2>
             </div>
-
-            <div class="about-layout max-w-5xl mx-auto">
-                <div class="about-mark reveal">S<span>.</span>T</div>
-                <div class="reveal" style="transition-delay:.15s">
-                    <p class="about-text">
-                        I am a B.Tech student in Artificial Intelligence and Engineering focused on
-                        building intelligent systems — from LLM-powered applications and NLP pipelines
-                        to scalable data engineering and robotics.
-                    </p>
-                    <p class="about-text about-second">
-                        I work across AI/ML, backend development with Flask, and full-stack delivery,
-                        combining research-oriented models with practical, production-ready solutions.
-                    </p>
-                </div>
+            <div class="max-w-3xl mx-auto reveal" style="transition-delay:0.15s">
+                <p class="about-text text-center">
+                    I am a B.Tech student in Artificial Intelligence and Engineering focused on building intelligent systems — from LLM-powered applications and NLP pipelines to scalable data engineering and robotics. 
+                    I work across AI/ML, backend development with Flask, and full-stack delivery, combining research-oriented models with practical, production-ready solutions.
+                </p>
             </div>
         </div>
     </section>
 
+    <!-- Education -->
     <section id="education" class="py-24">
-        <div class="section-web-fragment" aria-hidden="true"></div>
         <div class="container mx-auto px-6">
             <div class="text-center mb-14 reveal">
-                <p class="section-kicker light">02 / JOURNEY</p>
                 <h2 class="section-heading">Education</h2>
             </div>
-
             <div class="space-y-6 max-w-3xl mx-auto edu-stack">
                 <div class="edu-card">
-                    <span class="card-index">01</span>
                     <h3>Bachelor of Technology in Artificial Intelligence and Engineering</h3>
-                    <p class="edu-meta">Amrita Vishwa Vidyapeetham, Amaravati · 2023 – 2027</p>
-                    <p class="edu-grade">CGPA: <span data-count="8.94">8.94</span>
-                        <span class="grade-note">(as of 6th semester)</span>
-                    </p>
+                    <p class="edu-meta">Amrita Vishwa Vidyapeetham, Amaravati &nbsp;·&nbsp; 2023 – 2027</p>
+                    <p class="edu-grade">CGPA: <span data-count="8.94">8.94</span> <span style="font-weight:400; opacity:0.85;">(as of 6th semester)</span></p>
                 </div>
-
                 <div class="edu-card">
-                    <span class="card-index">02</span>
                     <h3>Intermediate</h3>
-                    <p class="edu-meta">RGUKT RK Valley · 2021 – 2023</p>
+                    <p class="edu-meta">RGUKT RK Valley &nbsp;·&nbsp; 2021 – 2023</p>
                     <p class="edu-grade">CGPA: <span data-count="9.31">9.31</span></p>
                 </div>
-
                 <div class="edu-card">
-                    <span class="card-index">03</span>
                     <h3>Class X</h3>
-                    <p class="edu-meta">Keshava Reddy E/M HS, Chittoor District · 2021</p>
-                    <p class="edu-grade">100% <span class="grade-note">(600/600)</span></p>
+                    <p class="edu-meta">Keshava Reddy E/M HS, Chittoor District &nbsp;·&nbsp; 2021</p>
+                    <p class="edu-grade">100% (600/600)</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects" class="py-24">
         <div class="container mx-auto px-6">
             <div class="text-center mb-14 reveal">
-                <p class="section-kicker">03 / SELECTED WORK</p>
                 <h2 class="section-heading">Projects</h2>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
                 <div class="project-card">
                     <p class="project-num">01 / DATA ENGINEERING</p>
                     <h3>Databricks Lakehouse Data Engineering Pipeline</h3>
-                    <p class="project-desc">Built a scalable data engineering pipeline on Databricks using the Medallion (Bronze–Silver–Gold) architecture with PySpark and Delta Lake. Improved ETL performance by 38% and achieved 99.6% data quality.</p>
+                    <p class="project-desc">
+                        Built a scalable data engineering pipeline on Databricks using the Medallion (Bronze–Silver–Gold) architecture with PySpark and Delta Lake. Improved ETL performance by 38% and achieved 99.6% data quality.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span><span class="tech-tag">PySpark</span><span class="tech-tag">Databricks</span>
-                        <span class="tech-tag">Delta Lake</span><span class="tech-tag">SQL</span><span class="tech-tag">Amazon S3</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">PySpark</span>
+                        <span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Delta Lake</span>
+                        <span class="tech-tag">SQL</span>
+                        <span class="tech-tag">Amazon S3</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <p class="project-num">02 / NLP &amp; LLMs</p>
                     <h3>Hinglish Toxic Comment Detection &amp; Rewriter</h3>
-                    <p class="project-desc">Multilingual NLP pipeline using XLM-RoBERTa for toxicity detection and Mistral 2B for semantic-preserving rewriting on 29K+ samples. Achieved 81.24% detection accuracy with REST APIs and MongoDB storage.</p>
+                    <p class="project-desc">
+                        Multilingual NLP pipeline using XLM-RoBERTa for toxicity detection and Mistral 2B for semantic-preserving rewriting on 29K+ samples. Achieved 81.24% detection accuracy with REST APIs and MongoDB storage.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span><span class="tech-tag">XLM-RoBERTa</span><span class="tech-tag">Mistral 2B</span>
-                        <span class="tech-tag">Transformers</span><span class="tech-tag">MongoDB</span><span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">XLM-RoBERTa</span>
+                        <span class="tech-tag">Mistral 2B</span>
+                        <span class="tech-tag">Transformers</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">REST APIs</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <p class="project-num">03 / LLMs &amp; FULL-STACK</p>
                     <h3>LLM-Based Personalized Goal Planning System</h3>
-                    <p class="project-desc">Full-stack Flask application that generates personalized day-wise goal roadmaps from user objectives and timelines using LLMs. Achieved 93% roadmap relevance across evaluation scenarios.</p>
+                    <p class="project-desc">
+                        Full-stack Flask application that generates personalized day-wise goal roadmaps from user objectives and timelines using LLMs. Achieved 93% roadmap relevance across evaluation scenarios.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">REST APIs</span><span class="tech-tag">SQLite</span><span class="tech-tag">HTML/CSS/JS</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">HTML/CSS/JS</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <p class="project-num">04 / MACHINE LEARNING</p>
                     <h3>Resume Screening Using Ensemble Models</h3>
-                    <p class="project-desc">Ensemble-based resume classification system using Voting Classifier as the final model, with SMOTE for class imbalance and PCA for dimensionality reduction. Published as IEEE paper.</p>
+                    <p class="project-desc">
+                        Ensemble-based resume classification system using Voting Classifier as the final model, with SMOTE for class imbalance and PCA for dimensionality reduction. Published as IEEE paper.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Voting Classifier</span>
-                        <span class="tech-tag">SMOTE</span><span class="tech-tag">PCA</span><span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Voting Classifier</span>
+                        <span class="tech-tag">SMOTE</span>
+                        <span class="tech-tag">PCA</span>
+                        <span class="tech-tag">Pandas</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <p class="project-num">05 / DEEP LEARNING</p>
                     <h3>Post-COVID Lung Fibrosis Detection using Chest X-rays</h3>
-                    <p class="project-desc">Deep learning pipeline for medical image classification of post-COVID lung fibrosis from chest X-rays. Final model: DenseNet121 with attention mechanism for improved feature focus.</p>
+                    <p class="project-desc">
+                        Deep learning pipeline for medical image classification of post-COVID lung fibrosis from chest X-rays. Final model: DenseNet121 with attention mechanism for improved feature focus.
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span><span class="tech-tag">DenseNet121</span><span class="tech-tag">Attention</span>
-                        <span class="tech-tag">TensorFlow</span><span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">DenseNet121</span>
+                        <span class="tech-tag">Attention</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">OpenCV</span>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <p class="project-num">06 / ROBOTICS &amp; ML</p>
                     <h3>Autonomous Underwater Robot for Medicinal Coral Reef Classification</h3>
-                    <p class="project-desc">ROS 2-based autonomous underwater robot with navigation and machine learning pipelines for medicinal coral reef classification. Achieved 84.4% accuracy and 92% precision in simulation (Gazebo).</p>
+                    <p class="project-desc">
+                        ROS 2-based autonomous underwater robot with navigation and machine learning pipelines for medicinal coral reef classification. Achieved 84.4% accuracy and 92% precision in simulation (Gazebo).
+                    </p>
                     <div class="project-tech">
-                        <span class="tech-tag">ROS 2</span><span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Machine Learning</span><span class="tech-tag">Gazebo</span><span class="tech-tag">Linux</span>
+                        <span class="tech-tag">ROS 2</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Gazebo</span>
+                        <span class="tech-tag">Linux</span>
                     </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="py-24">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-14 reveal">
+                <h2 class="section-heading">Technical Skills</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="skill-card">
+                    <div class="skill-icon">⌨</div>
+                    <h3>Languages</h3>
+                    <p>Python, SQL, Java</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🧠</div>
+                    <h3>AI / ML</h3>
+                    <p>Machine Learning, Deep Learning, NLP, LLMs, Computer Vision, Transformers</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚙</div>
+                    <h3>Development</h3>
+                    <p>Flask, REST APIs, HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄</div>
+                    <h3>Data &amp; Engineering</h3>
+                    <p>PySpark, Databricks, Delta Lake, ETL, MySQL, MongoDB, SQLite</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🛠</div>
+                    <h3>Tools &amp; Platforms</h3>
+                    <p>Git, GitHub, Linux, ROS 2, Gazebo, Amazon S3</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">💡</div>
+                    <h3>Core CS</h3>
+                    <p>DSA, OOP, DBMS, OS, Computer Networks</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-14 reveal">
-                <p class="section-kicker light">04 / TOOLKIT</p>
-                <h2 class="section-heading">Technical Skills</h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <div class="skill-card"><div class="skill-icon">⌨</div><h3>Languages</h3><p>Python, SQL, Java</p></div>
-                <div class="skill-card"><div class="skill-icon">◈</div><h3>AI / ML</h3><p>Machine Learning, Deep Learning, NLP, LLMs, Computer Vision, Transformers</p></div>
-                <div class="skill-card"><div class="skill-icon">↗</div><h3>Development</h3><p>Flask, REST APIs, HTML, CSS, JavaScript</p></div>
-                <div class="skill-card"><div class="skill-icon">▦</div><h3>Data &amp; Engineering</h3><p>PySpark, Databricks, Delta Lake, ETL, MySQL, MongoDB, SQLite</p></div>
-                <div class="skill-card"><div class="skill-icon">⚙</div><h3>Tools &amp; Platforms</h3><p>Git, GitHub, Linux, ROS 2, Gazebo, Amazon S3</p></div>
-                <div class="skill-card"><div class="skill-icon">+</div><h3>Core CS</h3><p>DSA, OOP, DBMS, OS, Computer Networks</p></div>
-            </div>
-        </div>
-    </section>
-
+    <!-- Contact -->
     <section id="contact" class="py-24">
         <div class="container mx-auto px-6">
             <div class="footer-line reveal"></div>
-
             <div class="text-center mb-14 reveal">
-                <p class="section-kicker">05 / SAY HELLO</p>
                 <h2 class="section-heading">Get in Touch</h2>
             </div>
-
-            <div class="flex flex-col items-center space-y-6 reveal" style="transition-delay:.15s">
+            <div class="flex flex-col items-center space-y-6 reveal" style="transition-delay:0.15s">
                 <div class="contact-line text-center">
                     <span class="label">Personal</span>
                     <a href="mailto:786shaikthaslim@gmail.com">786shaikthaslim@gmail.com</a>
                 </div>
-
                 <div class="contact-line text-center">
                     <span class="label">University</span>
                     <a href="mailto:av.sc.u4aie23138@av.students.amrita.edu">av.sc.u4aie23138@av.students.amrita.edu</a>
                 </div>
-
                 <div class="contact-line text-center">
                     <span class="label">Phone</span>
                     <a href="tel:+919398919257">+91-9398919257</a>
                 </div>
-
                 <div class="flex space-x-4 pt-4">
-                    <a href="https://github.com/thaslimShaikh" target="_blank" rel="noopener" class="social-link" title="GitHub">
+                    <a href="https://github.com/thaslimShaikh" target="_blank" class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/shaik-thaslim-33081030a" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+                    <a href="https://www.linkedin.com/in/shaik-thaslim-33081030a" target="_blank" class="social-link" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>
             </div>
-
-            <p class="copyright">© 2026 Shaik Thaslim. All rights reserved.</p>
+            <p style="text-align:center; margin-top:4rem; font-family:'Space Mono',monospace; font-size:0.65rem; letter-spacing:0.15em; text-transform:uppercase; color:rgba(67,67,67,0.3);">
+                © 2026 Shaik Thaslim. All rights reserved.
+            </p>
         </div>
     </section>
 
