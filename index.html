@@ -1,1315 +1,327 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shaik Thaslim — Portfolio</title>
 
-    <!-- Tailwind -->
-    <link
-        href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-        rel="stylesheet">
-
-    <!-- Font Awesome -->
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap"
-        rel="stylesheet">
-
-    <!-- Custom CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 
 <body>
 
-
-    <!-- =====================================================
-         SPIDER-GWEN INSPIRED TOP WEB
-         ===================================================== -->
-
+    <!-- Spider-Gwen-inspired hand-drawn web layer -->
     <div class="web-banner" aria-hidden="true">
+        <svg viewBox="0 0 1440 330" xmlns="http://www.w3.org/2000/svg"
+             preserveAspectRatio="none">
 
-        <svg
-            viewBox="0 0 1440 330"
-            xmlns="http://www.w3.org/2000/svg"
-            preserveAspectRatio="none">
-
-
-            <!-- LEFT CORNER WEB -->
-
+            <!-- LEFT CORNER: dense web like the reference -->
             <g class="web-ink web-left">
-
                 <path d="M-20 0 Q80 30 175 92 Q245 138 320 170" />
-
                 <path d="M-8 32 Q78 55 158 108 Q235 158 320 170" />
-
                 <path d="M-4 72 Q75 82 150 126 Q225 171 320 170" />
-
                 <path d="M-4 112 Q78 110 150 142 Q235 181 320 170" />
-
                 <path d="M-2 154 Q82 145 158 157 Q240 185 320 170" />
 
-
-                <!-- WEB RADIAL THREADS -->
-
                 <path d="M0 0 L320 170" />
-
                 <path d="M0 35 L270 166" />
-
                 <path d="M0 80 L235 168" />
-
                 <path d="M0 128 L200 170" />
-
                 <path d="M0 185 L175 172" />
-
                 <path d="M0 235 L165 175" />
-
                 <path d="M35 0 L120 170" />
-
                 <path d="M95 0 L170 170" />
-
                 <path d="M160 0 L215 170" />
-
                 <path d="M225 0 L255 170" />
 
-
-                <!-- LOOSE THREADS -->
-
+                <!-- loose lower threads -->
                 <path d="M110 158 Q108 205 113 250" />
-
                 <path d="M175 169 Q175 222 178 282" />
-
                 <path d="M245 170 Q245 210 248 245" />
-
             </g>
 
-
-
-            <!-- =================================================
-                 TOP CENTER WEB
-                 ================================================= -->
-
-            <g class="web-ink web-center">
-
-                <path
-                    d="M250 0 Q450 42 670 34 Q920 24 1210 8 Q1320 3 1460 0" />
-
-                <path
-                    d="M300 34 Q500 72 700 65 Q960 52 1240 32 Q1350 24 1450 22" />
-
-                <path
-                    d="M355 70 Q530 100 720 95 Q950 86 1210 61 Q1335 50 1445 48" />
-
-                <path
-                    d="M430 106 Q585 126 745 124 Q955 119 1185 91 Q1310 76 1435 76" />
-
-
-                <!-- HANGING WEB THREADS -->
-
-                <path d="M410 0 Q475 35 510 105" />
-
-                <path d="M560 0 Q610 38 640 96" />
-
-                <path d="M715 0 Q750 38 770 92" />
-
-                <path d="M875 0 Q900 34 910 82" />
-
-                <path d="M1035 0 Q1050 28 1050 70" />
-
-                <path d="M1190 0 Q1198 22 1190 55" />
-
-                <path d="M1335 0 Q1332 18 1322 42" />
-
-
-                <!-- SMALL DROPPING THREADS -->
-
-                <path d="M510 105 L510 135" />
-
-                <path d="M640 96 L640 128" />
-
-                <path d="M770 92 L770 123" />
-
-                <path d="M910 82 L910 112" />
-
-                <path d="M1050 70 L1050 101" />
-
-            </g>
-
-
-
-            <!-- =================================================
-                 RIGHT CORNER WEB
-                 ================================================= -->
-
+            <!-- RIGHT CORNER -->
             <g class="web-ink web-right">
-
-                <path
-                    d="M1460 0 Q1370 28 1290 88 Q1215 143 1140 195" />
-
-                <path
-                    d="M1460 40 Q1375 58 1300 108 Q1225 158 1140 195" />
-
-                <path
-                    d="M1460 82 Q1380 92 1310 132 Q1235 175 1140 195" />
-
-                <path
-                    d="M1460 126 Q1385 130 1320 153 Q1250 184 1140 195" />
-
-
-                <!-- RADIAL THREADS -->
+                <path d="M1460 0 Q1370 28 1290 88 Q1215 143 1140 195" />
+                <path d="M1460 40 Q1375 58 1300 108 Q1225 158 1140 195" />
+                <path d="M1460 82 Q1380 92 1310 132 Q1235 175 1140 195" />
+                <path d="M1460 126 Q1385 130 1320 153 Q1250 184 1140 195" />
 
                 <path d="M1440 0 L1140 195" />
-
                 <path d="M1440 48 L1190 190" />
-
                 <path d="M1440 100 L1235 188" />
-
                 <path d="M1440 155 L1280 188" />
-
                 <path d="M1410 0 L1335 185" />
-
                 <path d="M1340 0 L1280 185" />
-
                 <path d="M1270 0 L1220 190" />
-
                 <path d="M1200 0 L1175 190" />
 
-
-                <!-- LOOSE THREADS -->
-
                 <path d="M1280 185 Q1282 230 1280 270" />
-
                 <path d="M1215 190 Q1217 240 1216 302" />
-
                 <path d="M1148 194 Q1150 238 1150 278" />
-
             </g>
-
-
-
-            <!-- SMALL FREE THREADS -->
-
-            <g class="web-ink web-threads">
-
-                <path d="M355 0 Q358 45 355 78" />
-
-                <path d="M1125 0 Q1120 44 1123 82" />
-
-                <path d="M1390 0 Q1388 50 1392 88" />
-
-            </g>
-
         </svg>
-
-
-
-        <!-- =================================================
-             HANGING SPIDER
-             ================================================= -->
-
-        <div class="hanging-spider">
-
-            <span class="spider-thread"></span>
-
-            <div class="spider-body">
-
-                <span class="spider-head"></span>
-
-                <span class="spider-eye eye-left"></span>
-
-                <span class="spider-eye eye-right"></span>
-
-                <span class="spider-leg l1"></span>
-                <span class="spider-leg l2"></span>
-                <span class="spider-leg l3"></span>
-                <span class="spider-leg l4"></span>
-
-                <span class="spider-leg l5"></span>
-                <span class="spider-leg l6"></span>
-                <span class="spider-leg l7"></span>
-                <span class="spider-leg l8"></span>
-
-            </div>
-
-        </div>
-
+    </div>
     </div>
 
-
-
-    <!-- =====================================================
-         CURSOR SPIDER
-         ===================================================== -->
-
-    <div
-        class="spider-cursor"
-        id="spiderCursor"
-        aria-hidden="true">
-
-        <svg
-            viewBox="0 0 64 64"
-            xmlns="http://www.w3.org/2000/svg">
-
-            <ellipse
-                cx="32"
-                cy="35"
-                rx="10"
-                ry="12"
-                fill="currentColor"/>
-
-            <circle
-                cx="32"
-                cy="20"
-                r="7"
-                fill="currentColor"/>
-
-            <circle
-                cx="29.5"
-                cy="18.5"
-                r="1.4"
-                fill="#FAF7F2"/>
-
-            <circle
-                cx="34.5"
-                cy="18.5"
-                r="1.4"
-                fill="#FAF7F2"/>
-
-
-            <path class="leg"
-                  d="M23 28 Q10 19 4 9"/>
-
-            <path class="leg"
-                  d="M22 34 Q8 31 2 27"/>
-
-            <path class="leg"
-                  d="M22 40 Q9 47 4 56"/>
-
-            <path class="leg"
-                  d="M41 28 Q54 19 60 9"/>
-
-            <path class="leg"
-                  d="M42 34 Q56 31 62 27"/>
-
-            <path class="leg"
-                  d="M42 40 Q55 47 60 56"/>
-
+    <!-- Tiny spider follows the cursor -->
+    <div class="spider-cursor" id="spiderCursor" aria-hidden="true">
+        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="32" cy="35" rx="10" ry="12" fill="currentColor"/>
+            <circle cx="32" cy="20" r="7" fill="currentColor"/>
+            <circle cx="29.5" cy="18.5" r="1.4" fill="#FAF7F2"/>
+            <circle cx="34.5" cy="18.5" r="1.4" fill="#FAF7F2"/>
+            <path class="leg" d="M23 28 Q10 19 4 9"/>
+            <path class="leg" d="M22 34 Q8 31 2 27"/>
+            <path class="leg" d="M22 40 Q9 47 4 56"/>
+            <path class="leg" d="M41 28 Q54 19 60 9"/>
+            <path class="leg" d="M42 34 Q56 31 62 27"/>
+            <path class="leg" d="M42 40 Q55 47 60 56"/>
         </svg>
-
     </div>
 
-
-
-    <!-- =====================================================
-         NAVBAR
-         ===================================================== -->
-
-    <nav
-        id="navbar"
-        class="text-white py-4 fixed w-full top-0 z-50">
-
-        <div
-            class="container mx-auto flex justify-between items-center px-6">
-
-            <h1>
-                Shaik Thaslim
-            </h1>
-
+    <nav id="navbar" class="text-white py-4 fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center px-6">
+            <h1>Shaik Thaslim</h1>
             <ul class="flex space-x-6">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-
         </div>
-
     </nav>
 
-
-
-    <!-- =====================================================
-         HERO
-         ===================================================== -->
-
-    <section
-        id="home"
-        class="h-screen flex items-center justify-center text-center">
-
-
+    <section id="home" class="h-screen flex items-center justify-center text-center">
         <div class="hero-pink-glow"></div>
-
-
         <div class="hero-content">
-
-
-            <p class="hero-kicker">
-
-                — AI / ML ENGINEER &amp; DEVELOPER —
-
-            </p>
-
-
-
-            <h1>
-
-                Hello, I'm
-                <span>Shaik Thaslim</span>
-
-            </h1>
-
-
-
-            <p
-                class="mt-4 mb-8 hero-subtitle"
-                data-text="AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics">
-
+            <p class="hero-kicker">— AI / ML ENGINEER &amp; DEVELOPER —</p>
+            <h1>Hello, I'm <span>Shaik Thaslim</span></h1>
+            <p class="mt-4 mb-8 hero-subtitle"
+               data-text="AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics">
                 AI/ML Engineer · Software Developer · Flask Full-Stack · Deep Learning &amp; NLP · Robotics
-
             </p>
-
-
-
-            <a
-                href="#projects"
-                class="hero-btn">
-
-                View My Work
-
-                <span>↗</span>
-
-            </a>
-
-
+            <a href="#projects" class="hero-btn">View My Work <span>↗</span></a>
         </div>
 
-
-
-        <!-- Decorative typography -->
-
-        <div
-            class="hero-web-word"
-            aria-hidden="true">
-
-            THINK<br>
-            BEYOND
-
-        </div>
-
-
-
-        <!-- Scroll indicator -->
-
+        <div class="hero-web-word" aria-hidden="true">THINK<br>BEYOND</div>
         <div class="scroll-indicator">
-
             <span></span>
-
             <small>SCROLL</small>
-
         </div>
-
-
     </section>
-
-
-
-    <!-- =====================================================
-         MARQUEE
-         ===================================================== -->
 
     <div class="marquee-strip">
-
         <div class="marquee-inner">
-
-            <span>Python</span>
-            <b>✦</b>
-
-            <span>Machine Learning</span>
-            <b>✦</b>
-
-            <span>Deep Learning</span>
-            <b>✦</b>
-
-            <span>NLP</span>
-            <b>✦</b>
-
-            <span>LLMs</span>
-            <b>✦</b>
-
-            <span>Computer Vision</span>
-            <b>✦</b>
-
-            <span>PySpark</span>
-            <b>✦</b>
-
-            <span>Databricks</span>
-            <b>✦</b>
-
-            <span>ROS 2</span>
-            <b>✦</b>
-
-            <span>Flask</span>
-            <b>✦</b>
-
-            <span>Transformers</span>
-            <b>✦</b>
-
-            <span>REST APIs</span>
-            <b>✦</b>
-
-
-            <!-- duplicate for seamless animation -->
-
-            <span>Python</span>
-            <b>✦</b>
-
-            <span>Machine Learning</span>
-            <b>✦</b>
-
-            <span>Deep Learning</span>
-            <b>✦</b>
-
-            <span>NLP</span>
-            <b>✦</b>
-
-            <span>LLMs</span>
-            <b>✦</b>
-
-            <span>Computer Vision</span>
-            <b>✦</b>
-
-            <span>PySpark</span>
-            <b>✦</b>
-
-            <span>Databricks</span>
-            <b>✦</b>
-
-            <span>ROS 2</span>
-            <b>✦</b>
-
-            <span>Flask</span>
-            <b>✦</b>
-
-            <span>Transformers</span>
-            <b>✦</b>
-
-            <span>REST APIs</span>
-            <b>✦</b>
-
+            <span>Python</span><b>✦</b><span>Machine Learning</span><b>✦</b>
+            <span>Deep Learning</span><b>✦</b><span>NLP</span><b>✦</b>
+            <span>LLMs</span><b>✦</b><span>Computer Vision</span><b>✦</b>
+            <span>PySpark</span><b>✦</b><span>Databricks</span><b>✦</b>
+            <span>ROS 2</span><b>✦</b><span>Flask</span><b>✦</b>
+            <span>Transformers</span><b>✦</b><span>REST APIs</span><b>✦</b>
+            <span>Python</span><b>✦</b><span>Machine Learning</span><b>✦</b>
+            <span>Deep Learning</span><b>✦</b><span>NLP</span><b>✦</b>
+            <span>LLMs</span><b>✦</b><span>Computer Vision</span><b>✦</b>
+            <span>PySpark</span><b>✦</b><span>Databricks</span><b>✦</b>
+            <span>ROS 2</span><b>✦</b><span>Flask</span><b>✦</b>
+            <span>Transformers</span><b>✦</b><span>REST APIs</span><b>✦</b>
         </div>
-
     </div>
 
-
-
-    <!-- =====================================================
-         ABOUT
-         ===================================================== -->
-
-    <section
-        id="about"
-        class="py-24">
-
+    <section id="about" class="py-24">
         <div class="container mx-auto px-6">
-
-
-            <div
-                class="text-center mb-12 reveal">
-
-                <p class="section-kicker">
-                    01 / PROFILE
-                </p>
-
-                <h2 class="section-heading">
-                    About Me
-                </h2>
-
+            <div class="text-center mb-12 reveal">
+                <p class="section-kicker">01 / PROFILE</p>
+                <h2 class="section-heading">About Me</h2>
             </div>
-
-
 
             <div class="about-layout max-w-5xl mx-auto">
-
-
-                <div class="about-mark reveal">
-
-                    S<span>.</span>T
-
-                </div>
-
-
-
-                <div
-                    class="reveal"
-                    style="transition-delay:.15s">
-
+                <div class="about-mark reveal">S<span>.</span>T</div>
+                <div class="reveal" style="transition-delay:.15s">
                     <p class="about-text">
-
-                        I am a B.Tech student in Artificial Intelligence
-                        and Engineering focused on building intelligent
-                        systems — from LLM-powered applications and NLP
-                        pipelines to scalable data engineering and robotics.
-
+                        I am a B.Tech student in Artificial Intelligence and Engineering focused on
+                        building intelligent systems — from LLM-powered applications and NLP pipelines
+                        to scalable data engineering and robotics.
                     </p>
-
-
-
                     <p class="about-text about-second">
-
-                        I work across AI/ML, backend development with Flask,
-                        and full-stack delivery, combining research-oriented
-                        models with practical, production-ready solutions.
-
+                        I work across AI/ML, backend development with Flask, and full-stack delivery,
+                        combining research-oriented models with practical, production-ready solutions.
                     </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- =====================================================
-         EDUCATION
-         ===================================================== -->
-
-    <section
-        id="education"
-        class="py-24">
-
-
-        <div
-            class="section-web-fragment"
-            aria-hidden="true">
-        </div>
-
-
+    <section id="education" class="py-24">
+        <div class="section-web-fragment" aria-hidden="true"></div>
         <div class="container mx-auto px-6">
-
-
-            <div
-                class="text-center mb-14 reveal">
-
-                <p class="section-kicker light">
-                    02 / JOURNEY
-                </p>
-
-                <h2 class="section-heading">
-                    Education
-                </h2>
-
+            <div class="text-center mb-14 reveal">
+                <p class="section-kicker light">02 / JOURNEY</p>
+                <h2 class="section-heading">Education</h2>
             </div>
 
-
-
-            <div
-                class="space-y-6 max-w-3xl mx-auto edu-stack">
-
-
-                <!-- EDUCATION 01 -->
+            <div class="space-y-6 max-w-3xl mx-auto edu-stack">
+                <div class="edu-card">
+                    <span class="card-index">01</span>
+                    <h3>Bachelor of Technology in Artificial Intelligence and Engineering</h3>
+                    <p class="edu-meta">Amrita Vishwa Vidyapeetham, Amaravati · 2023 – 2027</p>
+                    <p class="edu-grade">CGPA: <span data-count="8.94">8.94</span>
+                        <span class="grade-note">(as of 6th semester)</span>
+                    </p>
+                </div>
 
                 <div class="edu-card">
-
-                    <span class="card-index">
-                        01
-                    </span>
-
-                    <h3>
-                        Bachelor of Technology in Artificial Intelligence and Engineering
-                    </h3>
-
-                    <p class="edu-meta">
-
-                        Amrita Vishwa Vidyapeetham,
-                        Amaravati · 2023 – 2027
-
-                    </p>
-
-                    <p class="edu-grade">
-
-                        CGPA:
-                        <span data-count="8.94">
-                            8.94
-                        </span>
-
-                        <span class="grade-note">
-                            (as of 6th semester)
-                        </span>
-
-                    </p>
-
+                    <span class="card-index">02</span>
+                    <h3>Intermediate</h3>
+                    <p class="edu-meta">RGUKT RK Valley · 2021 – 2023</p>
+                    <p class="edu-grade">CGPA: <span data-count="9.31">9.31</span></p>
                 </div>
-
-
-
-                <!-- EDUCATION 02 -->
 
                 <div class="edu-card">
-
-                    <span class="card-index">
-                        02
-                    </span>
-
-                    <h3>
-                        Intermediate
-                    </h3>
-
-                    <p class="edu-meta">
-
-                        RGUKT RK Valley · 2021 – 2023
-
-                    </p>
-
-                    <p class="edu-grade">
-
-                        CGPA:
-                        <span data-count="9.31">
-                            9.31
-                        </span>
-
-                    </p>
-
+                    <span class="card-index">03</span>
+                    <h3>Class X</h3>
+                    <p class="edu-meta">Keshava Reddy E/M HS, Chittoor District · 2021</p>
+                    <p class="edu-grade">100% <span class="grade-note">(600/600)</span></p>
                 </div>
-
-
-
-                <!-- EDUCATION 03 -->
-
-                <div class="edu-card">
-
-                    <span class="card-index">
-                        03
-                    </span>
-
-                    <h3>
-                        Class X
-                    </h3>
-
-                    <p class="edu-meta">
-
-                        Keshava Reddy E/M HS,
-                        Chittoor District · 2021
-
-                    </p>
-
-                    <p class="edu-grade">
-
-                        100%
-
-                        <span class="grade-note">
-                            (600/600)
-                        </span>
-
-                    </p>
-
-                </div>
-
-
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- =====================================================
-         PROJECTS
-         ===================================================== -->
-
-    <section
-        id="projects"
-        class="py-24">
-
-
+    <section id="projects" class="py-24">
         <div class="container mx-auto px-6">
-
-
-            <div
-                class="text-center mb-14 reveal">
-
-                <p class="section-kicker">
-                    03 / SELECTED WORK
-                </p>
-
-                <h2 class="section-heading">
-                    Projects
-                </h2>
-
+            <div class="text-center mb-14 reveal">
+                <p class="section-kicker">03 / SELECTED WORK</p>
+                <h2 class="section-heading">Projects</h2>
             </div>
 
-
-
-            <div
-                class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-                <!-- PROJECT 01 -->
-
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div class="project-card">
-
-                    <p class="project-num">
-                        01 / DATA ENGINEERING
-                    </p>
-
-                    <h3>
-                        Databricks Lakehouse Data Engineering Pipeline
-                    </h3>
-
-                    <p class="project-desc">
-
-                        Built a scalable data engineering pipeline on
-                        Databricks using the Medallion (Bronze–Silver–Gold)
-                        architecture with PySpark and Delta Lake.
-                        Improved ETL performance by 38% and achieved
-                        99.6% data quality.
-
-                    </p>
-
+                    <p class="project-num">01 / DATA ENGINEERING</p>
+                    <h3>Databricks Lakehouse Data Engineering Pipeline</h3>
+                    <p class="project-desc">Built a scalable data engineering pipeline on Databricks using the Medallion (Bronze–Silver–Gold) architecture with PySpark and Delta Lake. Improved ETL performance by 38% and achieved 99.6% data quality.</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PySpark</span>
-                        <span class="tech-tag">Databricks</span>
-                        <span class="tech-tag">Delta Lake</span>
-                        <span class="tech-tag">SQL</span>
-                        <span class="tech-tag">Amazon S3</span>
-
+                        <span class="tech-tag">Python</span><span class="tech-tag">PySpark</span><span class="tech-tag">Databricks</span>
+                        <span class="tech-tag">Delta Lake</span><span class="tech-tag">SQL</span><span class="tech-tag">Amazon S3</span>
                     </div>
-
                 </div>
 
-
-
-                <!-- PROJECT 02 -->
-
                 <div class="project-card">
-
-                    <p class="project-num">
-                        02 / NLP &amp; LLMs
-                    </p>
-
-                    <h3>
-                        Hinglish Toxic Comment Detection &amp; Rewriter
-                    </h3>
-
-                    <p class="project-desc">
-
-                        Multilingual NLP pipeline using XLM-RoBERTa
-                        for toxicity detection and Mistral 2B for
-                        semantic-preserving rewriting on 29K+ samples.
-                        Achieved 81.24% detection accuracy with REST APIs
-                        and MongoDB storage.
-
-                    </p>
-
+                    <p class="project-num">02 / NLP &amp; LLMs</p>
+                    <h3>Hinglish Toxic Comment Detection &amp; Rewriter</h3>
+                    <p class="project-desc">Multilingual NLP pipeline using XLM-RoBERTa for toxicity detection and Mistral 2B for semantic-preserving rewriting on 29K+ samples. Achieved 81.24% detection accuracy with REST APIs and MongoDB storage.</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">XLM-RoBERTa</span>
-                        <span class="tech-tag">Mistral 2B</span>
-                        <span class="tech-tag">Transformers</span>
-                        <span class="tech-tag">MongoDB</span>
-                        <span class="tech-tag">REST APIs</span>
-
+                        <span class="tech-tag">Python</span><span class="tech-tag">XLM-RoBERTa</span><span class="tech-tag">Mistral 2B</span>
+                        <span class="tech-tag">Transformers</span><span class="tech-tag">MongoDB</span><span class="tech-tag">REST APIs</span>
                     </div>
-
                 </div>
 
-
-
-                <!-- PROJECT 03 -->
-
                 <div class="project-card">
-
-                    <p class="project-num">
-                        03 / LLMs &amp; FULL-STACK
-                    </p>
-
-                    <h3>
-                        LLM-Based Personalized Goal Planning System
-                    </h3>
-
-                    <p class="project-desc">
-
-                        Full-stack Flask application that generates
-                        personalized day-wise goal roadmaps from user
-                        objectives and timelines using LLMs.
-                        Achieved 93% roadmap relevance across evaluation
-                        scenarios.
-
-                    </p>
-
+                    <p class="project-num">03 / LLMs &amp; FULL-STACK</p>
+                    <h3>LLM-Based Personalized Goal Planning System</h3>
+                    <p class="project-desc">Full-stack Flask application that generates personalized day-wise goal roadmaps from user objectives and timelines using LLMs. Achieved 93% roadmap relevance across evaluation scenarios.</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">LLMs</span>
-                        <span class="tech-tag">REST APIs</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">HTML/CSS/JS</span>
-
+                        <span class="tech-tag">Python</span><span class="tech-tag">Flask</span><span class="tech-tag">LLMs</span>
+                        <span class="tech-tag">REST APIs</span><span class="tech-tag">SQLite</span><span class="tech-tag">HTML/CSS/JS</span>
                     </div>
-
                 </div>
 
-
-
-                <!-- PROJECT 04 -->
-
                 <div class="project-card">
-
-                    <p class="project-num">
-                        04 / MACHINE LEARNING
-                    </p>
-
-                    <h3>
-                        Resume Screening Using Ensemble Models
-                    </h3>
-
-                    <p class="project-desc">
-
-                        Ensemble-based resume classification system
-                        using Voting Classifier as the final model,
-                        with SMOTE for class imbalance and PCA for
-                        dimensionality reduction. Published as IEEE paper.
-
-                    </p>
-
+                    <p class="project-num">04 / MACHINE LEARNING</p>
+                    <h3>Resume Screening Using Ensemble Models</h3>
+                    <p class="project-desc">Ensemble-based resume classification system using Voting Classifier as the final model, with SMOTE for class imbalance and PCA for dimensionality reduction. Published as IEEE paper.</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Scikit-learn</span>
-                        <span class="tech-tag">Voting Classifier</span>
-                        <span class="tech-tag">SMOTE</span>
-                        <span class="tech-tag">PCA</span>
-                        <span class="tech-tag">Pandas</span>
-
+                        <span class="tech-tag">Python</span><span class="tech-tag">Scikit-learn</span><span class="tech-tag">Voting Classifier</span>
+                        <span class="tech-tag">SMOTE</span><span class="tech-tag">PCA</span><span class="tech-tag">Pandas</span>
                     </div>
-
                 </div>
 
-
-
-                <!-- PROJECT 05 -->
-
                 <div class="project-card">
-
-                    <p class="project-num">
-                        05 / DEEP LEARNING
-                    </p>
-
-                    <h3>
-                        Post-COVID Lung Fibrosis Detection using Chest X-rays
-                    </h3>
-
-                    <p class="project-desc">
-
-                        Deep learning pipeline for medical image
-                        classification of post-COVID lung fibrosis
-                        from chest X-rays. Final model: DenseNet121
-                        with attention mechanism for improved feature focus.
-
-                    </p>
-
+                    <p class="project-num">05 / DEEP LEARNING</p>
+                    <h3>Post-COVID Lung Fibrosis Detection using Chest X-rays</h3>
+                    <p class="project-desc">Deep learning pipeline for medical image classification of post-COVID lung fibrosis from chest X-rays. Final model: DenseNet121 with attention mechanism for improved feature focus.</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">DenseNet121</span>
-                        <span class="tech-tag">Attention</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">OpenCV</span>
-
+                        <span class="tech-tag">Python</span><span class="tech-tag">DenseNet121</span><span class="tech-tag">Attention</span>
+                        <span class="tech-tag">TensorFlow</span><span class="tech-tag">OpenCV</span>
                     </div>
-
                 </div>
 
-
-
-                <!-- PROJECT 06 -->
-
                 <div class="project-card">
-
-                    <p class="project-num">
-                        06 / ROBOTICS &amp; ML
-                    </p>
-
-                    <h3>
-                        Autonomous Underwater Robot for Medicinal Coral Reef Classification
-                    </h3>
-
-                    <p class="project-desc">
-
-                        ROS 2-based autonomous underwater robot with
-                        navigation and machine learning pipelines for
-                        medicinal coral reef classification.
-                        Achieved 84.4% accuracy and 92% precision
-                        in simulation (Gazebo).
-
-                    </p>
-
+                    <p class="project-num">06 / ROBOTICS &amp; ML</p>
+                    <h3>Autonomous Underwater Robot for Medicinal Coral Reef Classification</h3>
+                    <p class="project-desc">ROS 2-based autonomous underwater robot with navigation and machine learning pipelines for medicinal coral reef classification. Achieved 84.4% accuracy and 92% precision in simulation (Gazebo).</p>
                     <div class="project-tech">
-
-                        <span class="tech-tag">ROS 2</span>
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">OpenCV</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Gazebo</span>
-                        <span class="tech-tag">Linux</span>
-
+                        <span class="tech-tag">ROS 2</span><span class="tech-tag">Python</span><span class="tech-tag">OpenCV</span>
+                        <span class="tech-tag">Machine Learning</span><span class="tech-tag">Gazebo</span><span class="tech-tag">Linux</span>
                     </div>
-
                 </div>
-
-
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- =====================================================
-         SKILLS
-         ===================================================== -->
-
-    <section
-        id="skills"
-        class="py-24">
-
-
+    <section id="skills" class="py-24">
         <div class="container mx-auto px-6">
-
-
-            <div
-                class="text-center mb-14 reveal">
-
-                <p class="section-kicker light">
-                    04 / TOOLKIT
-                </p>
-
-                <h2 class="section-heading">
-                    Technical Skills
-                </h2>
-
+            <div class="text-center mb-14 reveal">
+                <p class="section-kicker light">04 / TOOLKIT</p>
+                <h2 class="section-heading">Technical Skills</h2>
             </div>
 
-
-
-            <div
-                class="grid grid-cols-1 md:grid-cols-3 gap-5">
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        ⌨
-                    </div>
-
-                    <h3>
-                        Languages
-                    </h3>
-
-                    <p>
-                        Python, SQL, Java
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        ◈
-                    </div>
-
-                    <h3>
-                        AI / ML
-                    </h3>
-
-                    <p>
-                        Machine Learning, Deep Learning,
-                        NLP, LLMs, Computer Vision,
-                        Transformers
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        ↗
-                    </div>
-
-                    <h3>
-                        Development
-                    </h3>
-
-                    <p>
-                        Flask, REST APIs, HTML,
-                        CSS, JavaScript
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        ▦
-                    </div>
-
-                    <h3>
-                        Data &amp; Engineering
-                    </h3>
-
-                    <p>
-                        PySpark, Databricks, Delta Lake,
-                        ETL, MySQL, MongoDB, SQLite
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        ⚙
-                    </div>
-
-                    <h3>
-                        Tools &amp; Platforms
-                    </h3>
-
-                    <p>
-                        Git, GitHub, Linux, ROS 2,
-                        Gazebo, Amazon S3
-                    </p>
-
-                </div>
-
-
-
-                <div class="skill-card">
-
-                    <div class="skill-icon">
-                        +
-                    </div>
-
-                    <h3>
-                        Core CS
-                    </h3>
-
-                    <p>
-                        DSA, OOP, DBMS, OS,
-                        Computer Networks
-                    </p>
-
-                </div>
-
-
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="skill-card"><div class="skill-icon">⌨</div><h3>Languages</h3><p>Python, SQL, Java</p></div>
+                <div class="skill-card"><div class="skill-icon">◈</div><h3>AI / ML</h3><p>Machine Learning, Deep Learning, NLP, LLMs, Computer Vision, Transformers</p></div>
+                <div class="skill-card"><div class="skill-icon">↗</div><h3>Development</h3><p>Flask, REST APIs, HTML, CSS, JavaScript</p></div>
+                <div class="skill-card"><div class="skill-icon">▦</div><h3>Data &amp; Engineering</h3><p>PySpark, Databricks, Delta Lake, ETL, MySQL, MongoDB, SQLite</p></div>
+                <div class="skill-card"><div class="skill-icon">⚙</div><h3>Tools &amp; Platforms</h3><p>Git, GitHub, Linux, ROS 2, Gazebo, Amazon S3</p></div>
+                <div class="skill-card"><div class="skill-icon">+</div><h3>Core CS</h3><p>DSA, OOP, DBMS, OS, Computer Networks</p></div>
             </div>
-
         </div>
-
     </section>
 
-
-
-    <!-- =====================================================
-         CONTACT
-         ===================================================== -->
-
-    <section
-        id="contact"
-        class="py-24">
-
-
+    <section id="contact" class="py-24">
         <div class="container mx-auto px-6">
-
-
             <div class="footer-line reveal"></div>
 
-
-
-            <div
-                class="text-center mb-14 reveal">
-
-                <p class="section-kicker">
-                    05 / SAY HELLO
-                </p>
-
-                <h2 class="section-heading">
-                    Get in Touch
-                </h2>
-
+            <div class="text-center mb-14 reveal">
+                <p class="section-kicker">05 / SAY HELLO</p>
+                <h2 class="section-heading">Get in Touch</h2>
             </div>
 
-
-
-            <div
-                class="flex flex-col items-center space-y-6 reveal"
-                style="transition-delay:.15s">
-
-
-                <!-- EMAIL -->
-
+            <div class="flex flex-col items-center space-y-6 reveal" style="transition-delay:.15s">
                 <div class="contact-line text-center">
-
-                    <span class="label">
-                        Personal
-                    </span>
-
-                    <a href="mailto:786shaikthaslim@gmail.com">
-
-                        786shaikthaslim@gmail.com
-
-                    </a>
-
+                    <span class="label">Personal</span>
+                    <a href="mailto:786shaikthaslim@gmail.com">786shaikthaslim@gmail.com</a>
                 </div>
 
-
-
-                <!-- UNIVERSITY EMAIL -->
-
                 <div class="contact-line text-center">
-
-                    <span class="label">
-                        University
-                    </span>
-
-                    <a href="mailto:av.sc.u4aie23138@av.students.amrita.edu">
-
-                        av.sc.u4aie23138@av.students.amrita.edu
-
-                    </a>
-
+                    <span class="label">University</span>
+                    <a href="mailto:av.sc.u4aie23138@av.students.amrita.edu">av.sc.u4aie23138@av.students.amrita.edu</a>
                 </div>
 
-
-
-                <!-- PHONE -->
-
                 <div class="contact-line text-center">
-
-                    <span class="label">
-                        Phone
-                    </span>
-
-                    <a href="tel:+919398919257">
-
-                        +91-9398919257
-
-                    </a>
-
+                    <span class="label">Phone</span>
+                    <a href="tel:+919398919257">+91-9398919257</a>
                 </div>
-
-
-
-                <!-- SOCIALS -->
 
                 <div class="flex space-x-4 pt-4">
-
-
-                    <a
-                        href="https://github.com/thaslimShaikh"
-                        target="_blank"
-                        rel="noopener"
-                        class="social-link"
-                        title="GitHub">
-
+                    <a href="https://github.com/thaslimShaikh" target="_blank" rel="noopener" class="social-link" title="GitHub">
                         <i class="fab fa-github"></i>
-
                     </a>
-
-
-
-                    <a
-                        href="https://www.linkedin.com/in/shaik-thaslim-33081030a"
-                        target="_blank"
-                        rel="noopener"
-                        class="social-link"
-                        title="LinkedIn">
-
+                    <a href="https://www.linkedin.com/in/shaik-thaslim-33081030a" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
                         <i class="fab fa-linkedin-in"></i>
-
                     </a>
-
-
                 </div>
-
             </div>
 
-
-
-            <p class="copyright">
-
-                © 2026 Shaik Thaslim.
-                All rights reserved.
-
-            </p>
-
-
+            <p class="copyright">© 2026 Shaik Thaslim. All rights reserved.</p>
         </div>
-
     </section>
 
-
-
-    <!-- =====================================================
-         JAVASCRIPT
-         ===================================================== -->
-
     <script src="script.js"></script>
-
 </body>
-
 </html>
