@@ -13,45 +13,62 @@
 </head>
 <body class="bg-gray-100 font-sans">
 
-    <!-- Single corner spider web — top-left only -->
-    <div class="web-corner" aria-hidden="true">
-        <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" class="web-svg">
-            <path class="web-ring" d="M0 0 Q120 8 210 55 Q300 110 360 210 Q400 300 420 420" fill="none"/>
-            <path class="web-ring" d="M0 0 Q90 12 160 50 Q240 100 300 180 Q350 260 380 360" fill="none"/>
-            <path class="web-ring" d="M0 0 Q70 18 125 55 Q190 105 245 175 Q295 250 330 340" fill="none"/>
-            <path class="web-ring" d="M0 0 Q50 22 95 60 Q145 110 190 170 Q235 240 270 320" fill="none"/>
-            <path class="web-ring" d="M0 0 Q35 28 70 65 Q110 115 145 170 Q180 235 210 300" fill="none"/>
-            <path class="web-ring" d="M0 0 Q22 32 48 70 Q80 115 110 165 Q140 225 165 280" fill="none"/>
-            <path class="web-ring" d="M0 0 Q12 35 30 72 Q55 115 78 160 Q100 210 120 255" fill="none"/>
-            <path class="web-spoke" d="M0 0 L380 90"/>
-            <path class="web-spoke" d="M0 0 L340 160"/>
-            <path class="web-spoke" d="M0 0 L280 230"/>
-            <path class="web-spoke" d="M0 0 L200 300"/>
-            <path class="web-spoke" d="M0 0 L120 350"/>
-            <path class="web-spoke" d="M0 0 L50 390"/>
-            <path class="web-spoke" d="M0 0 L420 40"/>
-            <path class="web-spoke" d="M0 0 L15 420"/>
-            <g class="web-spider" transform="translate(95,95) scale(0.55)">
-                <ellipse cx="20" cy="22" rx="9" ry="11" fill="currentColor"/>
-                <circle cx="20" cy="10" r="6" fill="currentColor"/>
-                <circle cx="17" cy="8.5" r="1.3" fill="#FAF7F2"/>
-                <circle cx="23" cy="8.5" r="1.3" fill="#FAF7F2"/>
-                <path d="M12 16 Q2 8 -2 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M12 22 Q0 20 -4 18" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M12 28 Q2 34 -1 40" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M28 16 Q38 8 42 2" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M28 22 Q40 20 44 18" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-                <path d="M28 28 Q38 34 41 40" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+    <!-- Top spider web (your inspo) -->
+    <div class="web-banner" aria-hidden="true">
+        <svg viewBox="0 0 1200 280" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin meet">
+            <g class="web-ink">
+                <path d="M0 0 L180 120"/><path d="M0 0 L140 160"/><path d="M0 0 L90 190"/>
+                <path d="M0 0 L40 220"/><path d="M0 0 L220 80"/><path d="M0 0 L260 50"/>
+                <path d="M0 0 L300 25"/><path d="M0 0 L340 8"/>
+                <path d="M30 5 Q80 40 100 90 Q110 130 95 170" fill="none"/>
+                <path d="M55 4 Q120 45 145 100 Q160 145 140 190" fill="none"/>
+                <path d="M85 3 Q160 50 195 110 Q215 160 185 210" fill="none"/>
+                <path d="M120 2 Q200 55 245 120 Q270 175 230 230" fill="none"/>
+                <path d="M160 1 Q250 60 300 130 Q330 185 280 245" fill="none"/>
+                <path d="M100 90 L100 115"/><path d="M145 100 L145 130"/>
+                <path d="M195 110 L195 145"/><path d="M245 120 L245 150"/>
+            </g>
+            <g class="web-ink">
+                <path d="M280 8 L280 155" stroke-width="1.6"/>
+                <g transform="translate(280, 168)">
+                    <ellipse cx="0" cy="0" rx="7" ry="5" fill="currentColor"/>
+                    <circle cx="0" cy="-7" r="4.5" fill="currentColor"/>
+                    <path d="M-5 -4 Q-14 -10 -18 -6" fill="none" stroke-width="1.4"/>
+                    <path d="M-6 0 Q-16 2 -20 6" fill="none" stroke-width="1.4"/>
+                    <path d="M-5 3 Q-12 10 -14 14" fill="none" stroke-width="1.4"/>
+                    <path d="M5 -4 Q14 -10 18 -6" fill="none" stroke-width="1.4"/>
+                    <path d="M6 0 Q16 2 20 6" fill="none" stroke-width="1.4"/>
+                    <path d="M5 3 Q12 10 14 14" fill="none" stroke-width="1.4"/>
+                </g>
+            </g>
+            <g class="web-ink">
+                <path d="M0 0 Q300 55 600 40 Q900 25 1200 0" fill="none" stroke-width="1.8"/>
+                <path d="M40 30 Q350 85 600 70 Q850 55 1160 20" fill="none" stroke-width="1.3"/>
+                <path d="M80 55 Q380 110 600 95 Q820 80 1120 40" fill="none" stroke-width="1.2"/>
+                <path d="M400 62 L400 95"/><path d="M500 68 L500 105"/>
+                <path d="M700 62 L700 100"/><path d="M800 55 L800 90"/><path d="M950 40 L950 75"/>
+            </g>
+            <g class="web-ink">
+                <path d="M1200 0 L1020 120"/><path d="M1200 0 L1060 160"/><path d="M1200 0 L1110 190"/>
+                <path d="M1200 0 L1160 220"/><path d="M1200 0 L980 80"/><path d="M1200 0 L940 50"/>
+                <path d="M1200 0 L900 25"/><path d="M1200 0 L860 8"/>
+                <path d="M1170 5 Q1120 40 1100 90 Q1090 130 1105 170" fill="none"/>
+                <path d="M1145 4 Q1080 45 1055 100 Q1040 145 1060 190" fill="none"/>
+                <path d="M1115 3 Q1040 50 1005 110 Q985 160 1015 210" fill="none"/>
+                <path d="M1080 2 Q1000 55 955 120 Q930 175 970 230" fill="none"/>
+                <path d="M1040 1 Q950 60 900 130 Q870 185 920 245" fill="none"/>
+                <path d="M1100 90 L1100 115"/><path d="M1055 100 L1055 130"/>
+                <path d="M1005 110 L1005 145"/><path d="M955 120 L955 150"/>
             </g>
         </svg>
     </div>
 
     <div class="spider-cursor" id="spiderCursor">
-        <svg viewBox="0 0 64 64" width="28" height="28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 64 64" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
             <ellipse cx="32" cy="34" rx="10" ry="12" fill="currentColor"/>
             <circle cx="32" cy="20" r="7" fill="currentColor"/>
-            <circle cx="29" cy="18" r="1.6" fill="#FAF7F2"/>
-            <circle cx="35" cy="18" r="1.6" fill="#FAF7F2"/>
+            <circle cx="29" cy="18" r="1.5" fill="#FAF7F2"/>
+            <circle cx="35" cy="18" r="1.5" fill="#FAF7F2"/>
             <path class="leg leg-1" d="M22 28 Q8 18 4 10" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-2" d="M22 34 Q6 34 2 30" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
             <path class="leg leg-3" d="M22 40 Q8 48 4 56" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" fill="none"/>
@@ -91,30 +108,14 @@
 
     <div class="marquee-strip">
         <div class="marquee-inner">
-            <span>Python</span><span>·</span>
-            <span>Machine Learning</span><span>·</span>
-            <span>Deep Learning</span><span>·</span>
-            <span>NLP</span><span>·</span>
-            <span>LLMs</span><span>·</span>
-            <span>Computer Vision</span><span>·</span>
-            <span>PySpark</span><span>·</span>
-            <span>Databricks</span><span>·</span>
-            <span>ROS 2</span><span>·</span>
-            <span>Flask</span><span>·</span>
-            <span>Transformers</span><span>·</span>
-            <span>REST APIs</span><span>·</span>
-            <span>Python</span><span>·</span>
-            <span>Machine Learning</span><span>·</span>
-            <span>Deep Learning</span><span>·</span>
-            <span>NLP</span><span>·</span>
-            <span>LLMs</span><span>·</span>
-            <span>Computer Vision</span><span>·</span>
-            <span>PySpark</span><span>·</span>
-            <span>Databricks</span><span>·</span>
-            <span>ROS 2</span><span>·</span>
-            <span>Flask</span><span>·</span>
-            <span>Transformers</span><span>·</span>
-            <span>REST APIs</span><span>·</span>
+            <span>Python</span><span>·</span><span>Machine Learning</span><span>·</span><span>Deep Learning</span><span>·</span>
+            <span>NLP</span><span>·</span><span>LLMs</span><span>·</span><span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span><span>Databricks</span><span>·</span><span>ROS 2</span><span>·</span>
+            <span>Flask</span><span>·</span><span>Transformers</span><span>·</span><span>REST APIs</span><span>·</span>
+            <span>Python</span><span>·</span><span>Machine Learning</span><span>·</span><span>Deep Learning</span><span>·</span>
+            <span>NLP</span><span>·</span><span>LLMs</span><span>·</span><span>Computer Vision</span><span>·</span>
+            <span>PySpark</span><span>·</span><span>Databricks</span><span>·</span><span>ROS 2</span><span>·</span>
+            <span>Flask</span><span>·</span><span>Transformers</span><span>·</span><span>REST APIs</span><span>·</span>
         </div>
     </div>
 
